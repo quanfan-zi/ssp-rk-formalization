@@ -118,4 +118,6 @@ and bounded one-step harmonic function, followed by dominated convergence and La
 
 The variance theorem uses the finite Green/energy proof described in `second-order-proof.md`;
 the manuscript's continuous-time martingale/optional-stopping proof is not separately formalized.
-Ripple extraction is scheduled for a separate branch after publishing this CTMC checkpoint.
+The CTMC core and canonical record law are now extracted into local modules on the
+separate `codex/ripple-extraction` branch. See [the extraction inventory](ripple-extraction.md)
+for provenance, the dependency boundary, and validation.

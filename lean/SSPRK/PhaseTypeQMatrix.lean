@@ -1,5 +1,5 @@
 import SSPRK.PhaseTypeDensity
-import Ripple.CTMC.CTMC
+import SSPRK.CTMC.Core
 
 /-!
 # Finite CTMC semantics of phase-type data

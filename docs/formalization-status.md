@@ -138,15 +138,17 @@ and `PhaseChainEquality.lean` proves every state is reached and every row has th
 
 ## Ripple dependency audit
 
-The current workspace pins Ripple to `83d6a77319d1bbb9bd397f9613244d396dc48583`
-and mathlib to `c5ea00351c28e24afc9f0f84379aa41082b1188f`, with Lean 4.30.0.
-Ripple provides `QMatrix`, exponential holding-time laws and their first two moments,
-and canonical path laws. The inspected version does not provide the phase-type
+The workspace pins mathlib to `c5ea00351c28e24afc9f0f84379aa41082b1188f`, with Lean 4.30.0.
+The used subset of Ripple at `83d6a77319d1bbb9bd397f9613244d396dc48583` is now local in
+`SSPRK/CTMC/`; the Lake requirement and manifest entry for Ripple have been removed.
+This subset provides `QMatrix`, exponential holding-time laws, and canonical record laws.
+Ripple's first two holding-time moment lemmas were not used and are not retained.
+The inspected upstream version does not provide the phase-type
 minimum-variance theorem, Erlang classification or a complete PH absorption-time API.
 The first milestone therefore proves the required finite matrix inequality directly;
 the PH probability construction uses mathlib gamma measures and countable measure sums.
 The numerical bounds and PH measure construction use mathlib directly.
-`PhaseTypeQMatrix.lean` now constructs Ripple's finite `QMatrix` with an absorbing state,
+`PhaseTypeQMatrix.lean` constructs the extracted finite `QMatrix` with an absorbing state,
 the prescribed transient generator and absorption rates, and the initial probability law.
 `PhaseTypeCanonicalRecords.lean` constructs the initial mixture of actual canonical record
 laws. `CanonicalStateMarginals.lean` and `PhaseTypeAbsorptionProper.lean` prove that the
@@ -157,13 +159,13 @@ integrals, dominated convergence and Laplace uniqueness. `PhaseTypePath.lean` su
 the continuous-time path and its first-absorption semantics. `PhaseTypePathOccupation.lean`
 and `PhaseTypeOccupationLaw.lean` identify the stopped path integrals and deleted-state law.
 The variance proof remains the finite Green/energy argument explained above.
-After completing the manuscript formalization, the final dependency audit will extract any
-Ripple results actually used into local modules and remove the Ripple package dependency.
-The package is still pinned at this stage; dependency removal has not yet been performed.
+The extraction keeps the upstream namespace for compatibility while importing only local
+modules and mathlib. Source provenance, the Apache-2.0 license, the constant-level audit,
+and package-independent build checks are recorded in [ripple-extraction.md](ripple-extraction.md).
 
 ## Verification on 2026-09-11
 
-- The latest completed integrated `lake build` from `lean/` succeeded (3656 jobs),
+- The latest completed integrated `lake build` from `lean/` succeeded (3647 jobs),
   through third-order uniqueness, conditional-Erlang characterization, independent
   three-moment replacement, length-bias law identities, matrix-exponential density/survival,
   the full independent spectral/path Erlang rigidity theorem, exponential clock sums,
@@ -182,10 +184,13 @@ The package is still pinned at this stage; dependency removal has not yet been p
 - The third-order supremum bound, numerical optimum and actual auxiliary probability-law
   existence theorem also passed axiom checks with only the same three standard axioms.
 - The canonical absorption-law identity and its generator-inverse moment theorem passed
-  axiom checks with only the same standard axioms. Ripple's `CanonicalLaw.lean` replays
-  two existing style warnings about `maxHeartbeats` comments; project modules are clean.
+  axiom checks with only the same standard axioms. The local CTMC extraction builds
+  without the upstream `maxHeartbeats` style warnings.
 - The continuous-time first-absorption theorem, occupation integral identities, and actual
   complementary-occupation law were checked with only the same standard axioms.
+- The final extraction audit checks all 1,496 imported project declarations (including
+  generated helpers): their union of axioms contains only the three standard axioms.
+  Its imported-module graph contains no external `Ripple.*` module.
 - Independent source review checked the original theorem signature, cyclic matrices, the
   single-stage case, subprobability weights, and the supremum definition.
 - See `second-order-proof.md` for the mathematical correspondence and the finite-matrix

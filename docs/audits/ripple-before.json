@@ -1,0 +1,756 @@
+{
+  "directConstants": 51,
+  "entries": [
+    {
+      "direct": false,
+      "lines": [
+        20,
+        29
+      ],
+      "module": "Ripple.CTMC.CTMCProcess",
+      "name": "Ripple.CTMC.CTMCPath"
+    },
+    {
+      "direct": true,
+      "lines": [
+        19,
+        22
+      ],
+      "module": "Ripple.CTMC.DTMC",
+      "name": "Ripple.CTMC.DTMC"
+    },
+    {
+      "direct": true,
+      "lines": [
+        162,
+        171
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix"
+    },
+    {
+      "direct": false,
+      "lines": [
+        25,
+        25
+      ],
+      "module": "Ripple.CTMC.CTMCProcess",
+      "name": "Ripple.CTMC.CTMCPath.init"
+    },
+    {
+      "direct": false,
+      "lines": [
+        27,
+        27
+      ],
+      "module": "Ripple.CTMC.CTMCProcess",
+      "name": "Ripple.CTMC.CTMCPath.jumps"
+    },
+    {
+      "direct": false,
+      "lines": [
+        23,
+        23
+      ],
+      "module": "Ripple.CTMC.CTMCProcess",
+      "name": "Ripple.CTMC.CTMCPath.mk"
+    },
+    {
+      "direct": true,
+      "lines": [
+        165,
+        168
+      ],
+      "module": "Ripple.CTMC.CTMCProcess",
+      "name": "Ripple.CTMC.CTMCPath.stateSeq"
+    },
+    {
+      "direct": true,
+      "lines": [
+        21,
+        21
+      ],
+      "module": "Ripple.CTMC.DTMC",
+      "name": "Ripple.CTMC.DTMC.mk"
+    },
+    {
+      "direct": true,
+      "lines": [
+        22,
+        22
+      ],
+      "module": "Ripple.CTMC.DTMC",
+      "name": "Ripple.CTMC.DTMC.step"
+    },
+    {
+      "direct": true,
+      "lines": [
+        26,
+        29
+      ],
+      "module": "Ripple.CTMC.DTMC",
+      "name": "Ripple.CTMC.DTMC.stepN"
+    },
+    {
+      "direct": true,
+      "lines": [
+        189,
+        191
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.IsAbsorbing"
+    },
+    {
+      "direct": false,
+      "lines": [
+        20,
+        22
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.JumpHoldRecord"
+    },
+    {
+      "direct": true,
+      "lines": [
+        24,
+        26
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.JumpHoldTrajectorySpace"
+    },
+    {
+      "direct": true,
+      "lines": [
+        177,
+        185
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure"
+    },
+    {
+      "direct": true,
+      "lines": [
+        497,
+        571
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure_all_next_holdingTime_eq_zero_ae_of_absorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        573,
+        588
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure_all_next_holdingTime_nonneg_ae"
+    },
+    {
+      "direct": true,
+      "lines": [
+        318,
+        329
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure_all_next_holdingTime_pos_ae_of_nonabsorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        419,
+        495
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure_all_next_state_eq_current_ae_of_absorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        407,
+        417
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure_all_next_state_ne_current_ae_of_nonabsorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        235,
+        250
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure_history_next"
+    },
+    {
+      "direct": false,
+      "lines": [
+        199,
+        213
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure_map_frestrictLe_zero"
+    },
+    {
+      "direct": false,
+      "lines": [
+        252,
+        316
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure_next_holdingTime_pos_ae_of_nonabsorbing"
+    },
+    {
+      "direct": false,
+      "lines": [
+        331,
+        405
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure_next_state_ne_current_ae_of_nonabsorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        215,
+        233
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.canonicalRecordMeasure_record_zero_eq_init_ae"
+    },
+    {
+      "direct": false,
+      "lines": [
+        473,
+        478
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.cdf_holdingTimeMeasure_eq"
+    },
+    {
+      "direct": true,
+      "lines": [
+        28,
+        32
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.currentStateFromHistory"
+    },
+    {
+      "direct": true,
+      "lines": [
+        1509,
+        1514
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.currentStateFromHistory_frestrictLe"
+    },
+    {
+      "direct": true,
+      "lines": [
+        184,
+        187
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.diag_eq_neg_exitRate"
+    },
+    {
+      "direct": true,
+      "lines": [
+        232,
+        241
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.embeddedDTMC"
+    },
+    {
+      "direct": true,
+      "lines": [
+        274,
+        279
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.embeddedDTMC_step_of_absorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        267,
+        272
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.embeddedDTMC_step_of_nonabsorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        281,
+        285
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.embeddedDTMC_step_self_of_nonabsorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        308,
+        312
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.embeddedStepMeasure"
+    },
+    {
+      "direct": false,
+      "lines": [
+        386,
+        396
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.embeddedStepMeasure_ne_self_ae_of_nonabsorbing"
+    },
+    {
+      "direct": false,
+      "lines": [
+        321,
+        327
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.embeddedStepMeasure_singleton"
+    },
+    {
+      "direct": false,
+      "lines": [
+        377,
+        384
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.embeddedStepMeasure_singleton_self_of_nonabsorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        175,
+        177
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.exitRate"
+    },
+    {
+      "direct": true,
+      "lines": [
+        342,
+        366
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.exitRate_mul_integral_embeddedStepMeasure_eq_sum_rate"
+    },
+    {
+      "direct": false,
+      "lines": [
+        179,
+        182
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.exitRate_nonneg"
+    },
+    {
+      "direct": true,
+      "lines": [
+        429,
+        433
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.exitRate_pos_of_nonabsorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        435,
+        440
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.holdingTimeMeasure"
+    },
+    {
+      "direct": false,
+      "lines": [
+        480,
+        490
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.holdingTimeMeasure_Iic_zero"
+    },
+    {
+      "direct": true,
+      "lines": [
+        492,
+        500
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.holdingTimeMeasure_pos_ae"
+    },
+    {
+      "direct": true,
+      "lines": [
+        194,
+        197
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.instIsProbabilityMeasureCanonicalRecordMeasure"
+    },
+    {
+      "direct": false,
+      "lines": [
+        329,
+        340
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.integral_embeddedStepMeasure_eq_sum"
+    },
+    {
+      "direct": false,
+      "lines": [
+        650,
+        654
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.isMarkovKernel_jumpHoldStepKernel"
+    },
+    {
+      "direct": true,
+      "lines": [
+        85,
+        92
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.isMarkovKernel_jumpHoldTrajectoryStepKernel"
+    },
+    {
+      "direct": true,
+      "lines": [
+        187,
+        192
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.isProbabilityMeasure_canonicalRecordMeasure"
+    },
+    {
+      "direct": true,
+      "lines": [
+        314,
+        319
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.isProbabilityMeasure_embeddedStepMeasure"
+    },
+    {
+      "direct": true,
+      "lines": [
+        442,
+        446
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.isProbabilityMeasure_holdingTimeMeasure"
+    },
+    {
+      "direct": false,
+      "lines": [
+        542,
+        549
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.isProbabilityMeasure_jumpHoldStepMeasure"
+    },
+    {
+      "direct": false,
+      "lines": [
+        624,
+        632
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.isProbabilityMeasure_jumpHoldStepMeasureTotal"
+    },
+    {
+      "direct": true,
+      "lines": [
+        634,
+        642
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepKernel"
+    },
+    {
+      "direct": true,
+      "lines": [
+        644,
+        648
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepKernel_apply"
+    },
+    {
+      "direct": true,
+      "lines": [
+        535,
+        540
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepMeasure"
+    },
+    {
+      "direct": true,
+      "lines": [
+        598,
+        606
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepMeasureTotal"
+    },
+    {
+      "direct": true,
+      "lines": [
+        608,
+        614
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepMeasureTotal_of_absorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        616,
+        622
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepMeasureTotal_of_nonabsorbing"
+    },
+    {
+      "direct": false,
+      "lines": [
+        569,
+        576
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepMeasure_holdingTime_pos_ae"
+    },
+    {
+      "direct": false,
+      "lines": [
+        551,
+        558
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepMeasure_map_fst"
+    },
+    {
+      "direct": true,
+      "lines": [
+        560,
+        567
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepMeasure_map_snd"
+    },
+    {
+      "direct": false,
+      "lines": [
+        578,
+        586
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepMeasure_next_ne_self_ae"
+    },
+    {
+      "direct": true,
+      "lines": [
+        45,
+        53
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldTrajectoryStepKernel"
+    },
+    {
+      "direct": true,
+      "lines": [
+        55,
+        62
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldTrajectoryStepKernel_apply"
+    },
+    {
+      "direct": false,
+      "lines": [
+        142,
+        151
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldTrajectoryStepKernel_holdingTime_pos_ae_of_nonabsorbing"
+    },
+    {
+      "direct": false,
+      "lines": [
+        153,
+        163
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldTrajectoryStepKernel_next_ne_current_ae_of_nonabsorbing"
+    },
+    {
+      "direct": true,
+      "lines": [
+        210,
+        214
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpProb"
+    },
+    {
+      "direct": false,
+      "lines": [
+        243,
+        246
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpProb_self"
+    },
+    {
+      "direct": true,
+      "lines": [
+        216,
+        230
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpProb_sum"
+    },
+    {
+      "direct": true,
+      "lines": [
+        34,
+        40
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.measurable_currentStateFromHistory"
+    },
+    {
+      "direct": true,
+      "lines": [
+        165,
+        165
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.mk"
+    },
+    {
+      "direct": true,
+      "lines": [
+        167,
+        167
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.rate"
+    },
+    {
+      "direct": false,
+      "lines": [
+        171,
+        171
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.rate_diag"
+    },
+    {
+      "direct": false,
+      "lines": [
+        169,
+        169
+      ],
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.rate_nonneg"
+    },
+    {
+      "direct": true,
+      "lines": [
+        1458,
+        1463
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.recordTrajectoryToPath"
+    },
+    {
+      "direct": true,
+      "lines": [
+        1501,
+        1505
+      ],
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.recordTrajectoryToPath_stateSeq"
+    },
+    {
+      "direct": false,
+      "lines": null,
+      "module": "Ripple.CTMC.CTMCProcess",
+      "name": "Ripple.CTMC.CTMCPath.sojournStart.match_1"
+    },
+    {
+      "direct": false,
+      "lines": null,
+      "module": "Ripple.CTMC.DTMC",
+      "name": "Ripple.CTMC.DTMC.stepN._f"
+    },
+    {
+      "direct": true,
+      "lines": null,
+      "module": "Ripple.CTMC.DTMC",
+      "name": "Ripple.CTMC.DTMC.stepN.eq_2"
+    },
+    {
+      "direct": false,
+      "lines": null,
+      "module": "Ripple.CTMC.DTMC",
+      "name": "Ripple.CTMC.DTMC.stepN.match_1"
+    },
+    {
+      "direct": false,
+      "lines": null,
+      "module": "Ripple.CTMC.CanonicalLaw",
+      "name": "Ripple.CTMC.QMatrix.currentStateFromHistory._proof_1"
+    },
+    {
+      "direct": false,
+      "lines": null,
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.embeddedStepMeasure.eq_1"
+    },
+    {
+      "direct": false,
+      "lines": null,
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.exitRate.eq_1"
+    },
+    {
+      "direct": false,
+      "lines": null,
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpHoldStepKernel._proof_1"
+    },
+    {
+      "direct": false,
+      "lines": null,
+      "module": "Ripple.CTMC.CTMC",
+      "name": "Ripple.CTMC.QMatrix.jumpProb.eq_1"
+    }
+  ],
+  "externalRippleModules": [
+    "Ripple.CTMC.DTMC",
+    "Ripple.CTMC.CTMC",
+    "Ripple.CTMC.CTMCProcess",
+    "Ripple.CTMC.CanonicalLaw"
+  ],
+  "projectAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "projectDeclarations": 1485,
+  "transitiveConstants": 85
+}

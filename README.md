@@ -58,6 +58,11 @@ Run from `lean/`:
 lake build
 ```
 
+Mathlib is the only direct external dependency. The CTMC definitions and record-law
+lemmas used from Ripple are extracted into `lean/SSPRK/CTMC/`; see the
+[dependency inventory and provenance](docs/ripple-extraction.md) and the retained
+[Apache-2.0 license](licenses/Ripple-Apache-2.0.txt).
+
 ## Project structure
 
 - `docs/V1.6.pdf`: reference manuscript.
@@ -100,5 +105,7 @@ lake build
   convolution matching the first three PH integral moments.
 - `lean/SSPRK/LengthBias.lean`: the length-biased law and its normalized variance identity.
 - `lean/SSPRK/PhaseTypeDensity.lean`: the matrix-exponential PH density formula.
+- `lean/SSPRK/CTMC/`: the local finite CTMC core and canonical record measure.
+- `lean/scripts/AuditCTMC.lean`: the elaborated constant-dependency and axiom audit.
 - `lean/Main.lean`: imports the modules checked by the default build.
 - `lean/lean-toolchain` and `lean/lake-manifest.json`: pinned environment.

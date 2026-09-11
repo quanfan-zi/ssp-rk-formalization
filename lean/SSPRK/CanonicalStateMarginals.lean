@@ -1,4 +1,4 @@
-import Ripple.CTMC.CanonicalLaw
+import SSPRK.CTMC.CanonicalLaw
 
 /-!
 # State marginals of canonical jump records
@@ -81,7 +81,7 @@ theorem canonicalStateLaw_zero (x : Fin (s + 1)) :
 theorem canonicalStateLaw_eq_stepN (x : Fin (s + 1)) (n : ℕ) :
     Q.canonicalStateLaw x n = (Q.embeddedDTMC.stepN n x).toMeasure := by
   induction n with
-  | zero => simp [canonicalStateLaw_zero, PMF.toMeasure_pure]
+  | zero => simp [canonicalStateLaw_zero, DTMC.stepN, PMF.toMeasure_pure]
   | succ n ih =>
       rw [canonicalStateLaw_succ, ih]
       ext a ha

@@ -1,5 +1,5 @@
 import SSPRK.PhaseTypeQMatrix
-import Ripple.CTMC.CanonicalLaw
+import SSPRK.CTMC.CanonicalLaw
 
 /-!
 # Canonical jump records for phase-type data
@@ -94,8 +94,7 @@ theorem canonicalRecords_zero_next :
     [d.qMatrix.canonicalRecordMeasure_all_next_state_eq_current_ae_of_absorbing z,
       d.qMatrix.canonicalRecordMeasure_all_next_holdingTime_eq_zero_ae_of_absorbing z]
     with records hstate hhold
-  simp only [Ripple.CTMC.QMatrix.currentStateFromHistory_frestrictLe,
-    Ripple.CTMC.QMatrix.recordTrajectoryToPath_stateSeq] at hstate hhold
+  simp only [Ripple.CTMC.QMatrix.currentStateFromHistory_frestrictLe] at hstate hhold
   intro n hn
   have habs : d.qMatrix.IsAbsorbing (records n).2 :=
     hn ▸ d.qMatrix_isAbsorbing_zero

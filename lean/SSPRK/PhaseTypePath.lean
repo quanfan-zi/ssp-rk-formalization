@@ -116,8 +116,7 @@ theorem canonicalRecords_transient_step (d : PhaseTypeData s) :
     [d.qMatrix.canonicalRecordMeasure_all_next_holdingTime_pos_ae_of_nonabsorbing z,
       d.qMatrix.canonicalRecordMeasure_all_next_state_ne_current_ae_of_nonabsorbing z]
     with records hpos hne
-  simp only [Ripple.CTMC.QMatrix.currentStateFromHistory_frestrictLe,
-    Ripple.CTMC.QMatrix.recordTrajectoryToPath_stateSeq] at hpos hne
+  simp only [Ripple.CTMC.QMatrix.currentStateFromHistory_frestrictLe] at hpos hne
   intro n hn
   have hnonabs := d.qMatrix_not_absorbing_of_ne_zero (records n).2 hn
   exact ⟨hpos n hnonabs, hne n hnonabs⟩
