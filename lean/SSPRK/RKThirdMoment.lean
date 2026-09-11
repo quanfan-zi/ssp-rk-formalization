@@ -35,22 +35,4 @@ theorem phaseType_integral_cube (h : AbsolutelyMonotoneAt A b r) (hr : 0 < r)
 
 end AbsolutelyMonotoneAt
 
-/-- Substitute the RK moments into the PH bound and cancel the positive squared mean. -/
-theorem third_order_quadratic_of_moment_bound {s r : ℝ} (hr : 0 < r)
-    (hbound : (s + 2) * (r ^ 2 + 2 * r) ^ 2 ≤
-      (s + 1) * r * (r ^ 3 + 6 * r ^ 2 + 6 * r)) :
-    r ^ 2 - 2 * (s - 1) * r - 2 * (s - 1) ≤ 0 := by
-  apply nonpos_of_mul_nonpos_left (b := r ^ 2) _ (sq_pos_of_pos hr)
-  nlinarith only [hbound]
-
-/-- The positive root of the RK moment quadratic gives the third-order radius bound. -/
-theorem third_order_bound_of_quadratic {s r : ℝ} (hs : 1 ≤ s)
-    (hquad : r ^ 2 - 2 * (s - 1) * r - 2 * (s - 1) ≤ 0) :
-    r ≤ s - 1 + Real.sqrt (s ^ 2 - 1) := by
-  have hdisc : 0 ≤ s ^ 2 - 1 := by nlinarith only [hs]
-  have hroot := Real.sq_sqrt hdisc
-  have hnonneg := Real.sqrt_nonneg (s ^ 2 - 1)
-  by_contra! h
-  nlinarith only [hquad, hroot, hnonneg, h]
-
 end SSPRK

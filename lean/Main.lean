@@ -1,6 +1,10 @@
+import SecondOrderBound
+import ThirdOrderBound
+import SecondOrderEquality
+import ThirdOrderEquality
 import SSPRK.SecondOrderOptimality
-import SSPRK.SecondOrderEquality
-import SSPRK.SecondOrderUniqueness
+import SSPRK.SecondOrderInitialWeights
+import SSPRK.SecondOrderRadiusEquality
 import SSPRK.Endpoint
 import SSPRK.DownwardClosure
 import SSPRK.PhaseTypeGeneratorMoments
@@ -25,7 +29,7 @@ import SSPRK.PhaseTypeThirdMixtureEquality
 import SSPRK.PhaseTypeThirdLaw
 import SSPRK.PhaseTypeDimensionBounds
 import SSPRK.FeasibilityAtZero
-import SSPRK.ThirdOrderUniqueness
+import SSPRK.ThirdOrderRadiusEquality
 import SSPRK.PhaseTypeConditioning
 import SSPRK.LengthBias
 import SSPRK.MomentCountableMixture

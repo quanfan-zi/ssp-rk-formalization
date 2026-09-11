@@ -1,4 +1,4 @@
-import SSPRK.ThirdOrder
+import SSPRK.ThirdOrderRadius
 import SSPRK.SDIRKAttainment
 
 /-!

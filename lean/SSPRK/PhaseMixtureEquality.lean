@@ -1,4 +1,4 @@
-import SSPRK.SecondOrderEquality
+import SSPRK.SecondOrderInitialWeights
 
 /-!
 # Equality in the subprobability mixture variance bound

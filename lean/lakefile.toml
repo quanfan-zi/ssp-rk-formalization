@@ -12,3 +12,15 @@ name = "Main"
 
 [[lean_lib]]
 name = "SSPRK"
+
+[[lean_lib]]
+name = "SecondOrderBound"
+
+[[lean_lib]]
+name = "ThirdOrderBound"
+
+[[lean_lib]]
+name = "SecondOrderEquality"
+
+[[lean_lib]]
+name = "ThirdOrderEquality"

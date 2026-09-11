@@ -1,4 +1,3 @@
-import SSPRK.Endpoint
 import SSPRK.PhaseTypeThirdLaw
 import SSPRK.RKThirdMoment
 import SSPRK.SDIRKAttainment
@@ -91,7 +90,7 @@ theorem eq_sdirk_of_sorted_transform {s : ℕ} (hs : 2 ≤ s)
   field_simp [hsreal.ne', hrnonzero] at hj hmean ⊢
   nlinarith
 
-theorem third_order_unique_at_radius {s : ℕ} (hs : 2 ≤ s)
+theorem third_order_classification_at_bound {s : ℕ} (hs : 2 ≤ s)
     (A : Matrix (Fin s) (Fin s) ℝ) (b : Fin s → ℝ)
     (hord1 : dotProduct b (fun _ ↦ (1 : ℝ)) = 1)
     (hord2 : dotProduct b (A.mulVec (fun _ ↦ (1 : ℝ))) = 1 / 2)
@@ -178,27 +177,6 @@ theorem third_order_unique_at_radius {s : ℕ} (hs : 2 ≤ s)
       _ = dotProduct d.initial (d.green.mulVec (fun _ ↦ 1)) := hraw1.symm
       _ = d.mass * (s : ℝ) * sdirkD s := by rw [hfirst, ha_eq]
   exact ⟨e, eq_sdirk_of_sorted_transform hs A b e ham d.mass hN homega hmean'⟩
-
-theorem third_order_unique_of_radius_eq {s : ℕ} (hs : 2 ≤ s)
-    (A : Matrix (Fin s) (Fin s) ℝ) (b : Fin s → ℝ)
-    (hord1 : dotProduct b (fun _ ↦ (1 : ℝ)) = 1)
-    (hord2 : dotProduct b (A.mulVec (fun _ ↦ (1 : ℝ))) = 1 / 2)
-    (hord3 : dotProduct b ((A * A).mulVec (fun _ ↦ (1 : ℝ))) = 1 / 6)
-    (hradius : absoluteMonotonicityRadius A b = ENNReal.ofReal (thirdOrderRadius s)) :
-    ∃ e : Fin s ≃ Fin s,
-      A.submatrix e e = sdirkA s ∧ (fun j ↦ b (e j)) = sdirkB s := by
-  have hrpos : 0 < thirdOrderRadius s := thirdOrderRadius_pos hs
-  have hradius_pos : 0 < absoluteMonotonicityRadius A b := by
-    rw [hradius, ENNReal.ofReal_pos]
-    exact hrpos
-  have hradius_finite : absoluteMonotonicityRadius A b < ⊤ := by
-    rw [hradius]
-    exact ENNReal.ofReal_lt_top
-  have ham := absolutelyMonotoneAt_absoluteMonotonicityRadius A b hradius_pos hradius_finite
-  have hradius_toReal : (absoluteMonotonicityRadius A b).toReal = thirdOrderRadius s := by
-    rw [hradius, ENNReal.toReal_ofReal hrpos.le]
-  rw [hradius_toReal] at ham
-  exact third_order_unique_at_radius hs A b hord1 hord2 hord3 ham
 
 end
 
