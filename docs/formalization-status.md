@@ -9,7 +9,15 @@ up to a simultaneous permutation of stages.
 
 The PH construction now defines actual probability measures, proves all integer integral
 moments and the minimum-variance inequality, and connects the laws to feasible RK tableaux.
-The longer-term source remains `docs/V1.6.pdf`.
+The third-order numerical optimum $s-1+\sqrt{s^2-1}$ is now proved for $s\geq2$,
+including the general complete-radius bound, the attaining SDIRK family and uniqueness up
+to simultaneous stage permutation. The independent spectral/path proof of Lemma 4.7
+is also complete. Actual canonical CTMC jump-record absorption and its full PH law are proved.
+The continuous-time path has the prescribed initial law and absorption time. Its occupation
+integrals satisfy the same-path decomposition and the deleted-state PH law.
+The variance theorem retains the finite Green/energy proof; the continuous-time
+martingale/optional-stopping proof is not separately formalized.
+The source remains `docs/V1.6.pdf`.
 
 ## Source correspondence
 
@@ -17,21 +25,27 @@ The longer-term source remains `docs/V1.6.pdf`.
 | --- | --- | --- |
 | Section 2.4, equations (2.17)-(2.19) | `SSPRK/RKTransform.lean`, `SSPRK/Substochastic.lean` | Transform algebra and convergent Neumann series proved |
 | Section 2.6, equations (2.26), (2.28) | `SSPRK/RKTransform.lean` | First three weighted matrix moments proved |
-| Theorem 3.1, minimum-variance inequality | `SSPRK/VariancePotential.lean`, `SSPRK/PhaseVariance.lean`, `SSPRK/PhaseMomentBound.lean`, `SSPRK/PhaseTypeVariance.lean` | Finite-state energy bound and actual PH integral/variance inequality proved; equality classification remains |
+| Theorem 3.1, minimum-variance inequality | `SSPRK/VariancePotential.lean`, `SSPRK/PhaseVariance.lean`, `SSPRK/PhaseMomentBound.lean`, `SSPRK/PhaseTypeVariance.lean` | Finite-state energy bound and actual PH integral/variance inequality proved; equality is listed under Corollary 3.2 |
 | Theorem 5.2, bound at every feasible positive radius | `SSPRK/SecondOrder.lean` | Proved with the original statement unchanged |
 | Theorem 5.2, complete supremum radius upper bound | `SSPRK/Radius.lean` | Proved; the extended nonnegative real radius also represents infinite radii for general tableaux |
 | Equation (5.1), midpoint family | `SSPRK/MidpointOrder.lean`, `SSPRK/ChainMatrices.lean`, `SSPRK/MidpointAttainment.lean` | Order conditions, inverse certificate, feasibility at $2s$, and exact radius proved |
-| Lemma 4.3, independent sums | `SSPRK/MomentAlgebra.lean` | Algebraic moment inequalities proved; probabilistic interpretation and equality case remain |
-| Proposition 2.2, PH laws and moment formulas | `SSPRK/PhaseType.lean`, `SSPRK/PhaseTypeUniformization.lean`, `SSPRK/PhaseTypeAllMoments.lean`, `SSPRK/PhaseTypeGeneratorMoments.lean`, `SSPRK/PhaseTypeLaplaceGenerator.lean`, `SSPRK/PhaseTypeLaw.lean` | Probability law, support, zero atom, all positive integer integral moments, resolvent Laplace formula and clock invariance proved; matrix-exponential formulas and CTMC identification remain |
-| PH interpretation of the RK transform | `SSPRK/RKPhaseType.lean` | Constructed law has generator $-M$, mean $r$, second moment $r^2+2r$, and variance $2r$ |
-| Corollary 3.2, equality classification | `SSPRK/PhaseMixtureChain.lean`, `SSPRK/PhaseTypeEquality.lean`, `SSPRK/ErlangPhaseType.lean`, `SSPRK/ErlangVariance.lean` | Full representation rigidity and standard Erlang law/sharpness proved; the final probability-law iff remains to be packaged |
-| Theorem 4.1, Lemmas 4.2, 4.4-4.5, Corollary 4.6 | Not yet formalized | Pending |
-| Lemma 4.7, minimal Erlang rigidity | Not yet formalized | Pending |
+| Lemma 4.2, mixtures | `SSPRK/MomentMixture.lean`, `SSPRK/MomentCountableMixture.lean`, `SSPRK/ProbabilityMomentMixture.lean`, `SSPRK/LengthBiasMixture.lean` | Finite/countable moment bounds and equality conditions proved for actual probability mixtures, including the full length-biased mixture law identity and normalized weights |
+| Section 4.1, length bias | `SSPRK/LengthBias.lean` | Actual probability measure, integral change of measure, moments and normalized variance identity proved |
+| Lemma 4.3, independent sums | `SSPRK/MomentAlgebra.lean`, `SSPRK/MomentAlgebraEquality.lean`, `SSPRK/MomentConvolution.lean`, `SSPRK/LengthBiasConvolution.lean` | Moment bounds and equality implications, actual independent-sum law and integral closure, and the full length-bias convolution identity proved |
+| Proposition 2.2, PH laws and moment formulas | `SSPRK/PhaseType.lean`, `SSPRK/PhaseTypeUniformization.lean`, `SSPRK/PhaseTypeAllMoments.lean`, `SSPRK/PhaseTypeGeneratorMoments.lean`, `SSPRK/PhaseTypeLaplaceGenerator.lean`, `SSPRK/PhaseTypeLaw.lean`, `SSPRK/PhaseTypeDensity.lean`, `SSPRK/PhaseTypeSurvival.lean`, `SSPRK/PhaseTypeAbsorptionLaw.lean` | Probability law, all positive integer moments, Laplace formula, clock invariance, density/survival/CDF and actual canonical absorption-time law proved |
+| PH interpretation of the RK transform | `SSPRK/RKPhaseType.lean`, `SSPRK/RKThirdMoment.lean` | Constructed law has generator $-M$ and the first three prescribed integral moments under the respective chain order conditions |
+| Corollary 3.2, equality classification | `SSPRK/PhaseMixtureChain.lean`, `SSPRK/PhaseTypeEquality.lean`, `SSPRK/PhaseTypeLawEquality.lean` | Full representation rigidity and the actual variance-equality iff Erlang-law characterization proved |
+| Lemma 4.4, state elimination | `SSPRK/PhaseTypeElimination.lean`, `SSPRK/PhaseTypePathOccupation.lean`, `SSPRK/PhaseTypeOccupationLaw.lean` | Reduced PH data, transience, Green identities and the full law of the actual complementary path occupation proved |
+| Theorem 4.1, third-moment bound | `SSPRK/PhaseTypeThirdMoment.lean`, `SSPRK/PhaseTypeThirdMomentIntegral.lean` | State-count induction for arbitrary cyclic matrices and actual PH integral inequality proved, with random starts and zero atoms |
+| Lemma 4.5, auxiliary replacement | `SSPRK/AuxiliaryScale.lean`, `SSPRK/ScaledExponential.lean`, `SSPRK/AuxiliaryLaw.lean`, `SSPRK/PhaseTypeAuxiliary.lean` | Actual auxiliary probability law, its moment class, and an independent convolution matching all three integrable moments of the normalized PH law proved |
+| Corollary 4.6, third-moment equality | `SSPRK/PhaseTypeThirdEquality.lean`, `SSPRK/PhaseTypeThirdMixtureEquality.lean`, `SSPRK/PhaseTypeThirdLaw.lean`, `SSPRK/PhaseTypeConditioning.lean` | Full representation classification and the actual conditional-Erlang-law iff proved |
+| Lemma 4.7, minimal Erlang rigidity | `SSPRK/PhaseTypeErlangCharpoly.lean`, `SSPRK/PhaseTypeErlangNilpotent.lean`, `SSPRK/ErlangUniformizedWeights.lean`, `SSPRK/NilpotentLongPath.lean`, `SSPRK/OrderedPhaseChain.lean`, `SSPRK/PhaseTypeErlangRigidity.lean` | Complete independent pole/spectral/path proof, including exact dimension and generator/initial-distribution rigidity; no variance-equality argument used |
 | Lemma 5.1, endpoint feasibility | `SSPRK/Endpoint.lean` | Feasible radii form a closed set; every positive finite supremum is feasible |
 | Theorem 5.2, attainment and numerical optimum | `SSPRK/MidpointAttainment.lean`, `SSPRK/SecondOrderOptimality.lean` | Proved for every positive stage count |
 | Theorem 5.2, uniqueness | `SSPRK/PhaseMixtureChain.lean`, `SSPRK/SecondOrderUniqueness.lean` | Complete midpoint tableau classification up to simultaneous stage permutation proved |
-| Theorem 5.3, third-order optimality and uniqueness | Not yet formalized | Pending |
-| Appendix A, downward closure | `SSPRK/ScaledResolvent.lean`, `SSPRK/DownwardClosure.lean` | All complete SSP conditions preserved for $0<\theta\leq r$ |
+| Theorem 5.3, third-order numerical optimality | `SSPRK/ThirdOrder.lean`, `SSPRK/SDIRKOrder.lean`, `SSPRK/SDIRKAttainment.lean`, `SSPRK/ThirdOrderOptimality.lean` | General complete-radius bound, all four order conditions, SDIRK attainment and numerical optimum proved |
+| Theorem 5.3, uniqueness | `SSPRK/ThirdOrderUniqueness.lean` | Full SDIRK tableau classification up to simultaneous stage permutation proved |
+| Appendix A, downward closure | `SSPRK/ScaledResolvent.lean`, `SSPRK/DownwardClosure.lean`, `SSPRK/FeasibilityAtZero.lean` | All complete SSP conditions preserved for $0\leq\theta\leq r$; positive feasibility also forces nonnegative tableau coefficients |
 
 ## Second-order proof route
 
@@ -92,9 +106,12 @@ the positive-time mixture alone has zeroth moment $\alpha\mathbf1$.
 (\int x\,d\mu)^2/s$ for $s>0$. `RKPhaseType.lean` connects this inequality to the
 original second-order SSP bound using a probability measure with the required moments.
 
-The law is currently defined through uniformization. Equality with the absorption-time
-law of a formal CTMC path process and matrix-exponential survival/density formulas
-are not yet proved. `PhaseTypeLaw.lean` proves that any two admissible uniformization
+The law is defined through uniformization. `PhaseTypeDensity.lean` proves the matrix-exponential
+density $\alpha e^{tT}(-T\mathbf1)$ on nonnegative times. `PhaseTypeSurvival.lean` proves
+$\mu((t,\infty))=\alpha e^{tT}\mathbf1$ for $t\geq0$. `PhaseTypeAbsorptionLaw.lean`
+identifies this measure with the absorption time of the actual canonical jump-record
+process and transfers all generator-inverse moments to that random variable.
+`PhaseTypeLaw.lean` proves that any two admissible uniformization
 rates give exactly the same measure. `PhaseTypeReindex.lean` proves invariance under
 simultaneous relabeling of transient states.
 
@@ -128,12 +145,32 @@ and canonical path laws. The inspected version does not provide the phase-type
 minimum-variance theorem, Erlang classification or a complete PH absorption-time API.
 The first milestone therefore proves the required finite matrix inequality directly;
 the PH probability construction uses mathlib gamma measures and countable measure sums.
+The numerical bounds and PH measure construction use mathlib directly.
+`PhaseTypeQMatrix.lean` now constructs Ripple's finite `QMatrix` with an absorbing state,
+the prescribed transient generator and absorption rates, and the initial probability law.
+`PhaseTypeCanonicalRecords.lean` constructs the initial mixture of actual canonical record
+laws. `CanonicalStateMarginals.lean` and `PhaseTypeAbsorptionProper.lean` prove that the
+embedded chain governs the state marginals and reaches absorption almost surely.
+`PhaseTypeRecordHarmonic.lean`, `PhaseTypeAbsorptionLimit.lean` and
+`PhaseTypeAbsorptionLaw.lean` prove the absorption-time law through finite-record conditional
+integrals, dominated convergence and Laplace uniqueness. `PhaseTypePath.lean` supplies
+the continuous-time path and its first-absorption semantics. `PhaseTypePathOccupation.lean`
+and `PhaseTypeOccupationLaw.lean` identify the stopped path integrals and deleted-state law.
+The variance proof remains the finite Green/energy argument explained above.
+After completing the manuscript formalization, the final dependency audit will extract any
+Ripple results actually used into local modules and remove the Ripple package dependency.
+The package is still pinned at this stage; dependency removal has not yet been performed.
 
 ## Verification on 2026-09-11
 
-- `lake build` from `lean/` completed successfully (3517 jobs), including all completed
-  modules through `Main.lean`.
-- Completed modules have clean LSP diagnostics and are imported by the default target.
+- The latest completed integrated `lake build` from `lean/` succeeded (3656 jobs),
+  through third-order uniqueness, conditional-Erlang characterization, independent
+  three-moment replacement, length-bias law identities, matrix-exponential density/survival,
+  the full independent spectral/path Erlang rigidity theorem, exponential clock sums,
+  actual canonical absorption properness/law, all absorption-time moment formulas,
+  continuous-time path semantics, occupation path integrals and deleted-state law.
+- Integrated modules have clean LSP diagnostics. New equality and coupling modules are
+  checked separately while in progress and added to the default target when ready.
 - `lean_verify` reports exactly `propext`, `Classical.choice`, and `Quot.sound` for
   `SSPRK.second_order_rk_ssp_bound` and `SSPRK.second_order_radius_bound`, with no source warnings.
 - The new numerical optimum, PH moment formula, RK probability bridge, endpoint and downward
@@ -142,6 +179,13 @@ the PH probability construction uses mathlib gamma measures and countable measur
   are introduced.
 - Full second-order uniqueness, the fixed-state and mixed-state chain classifications, and
   Laplace uniqueness passed their Lean checks with only the same three standard axioms.
+- The third-order supremum bound, numerical optimum and actual auxiliary probability-law
+  existence theorem also passed axiom checks with only the same three standard axioms.
+- The canonical absorption-law identity and its generator-inverse moment theorem passed
+  axiom checks with only the same standard axioms. Ripple's `CanonicalLaw.lean` replays
+  two existing style warnings about `maxHeartbeats` comments; project modules are clean.
+- The continuous-time first-absorption theorem, occupation integral identities, and actual
+  complementary-occupation law were checked with only the same standard axioms.
 - Independent source review checked the original theorem signature, cyclic matrices, the
   single-stage case, subprobability weights, and the supremum definition.
 - See `second-order-proof.md` for the mathematical correspondence and the finite-matrix

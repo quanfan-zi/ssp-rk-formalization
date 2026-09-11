@@ -4,7 +4,7 @@ Lean formalization of SSP-RK theory
 
 This project is used for the Lean formal verification of the SSP-RK theory. Based on the main proof line of the paper V1.6, the repository mainly maintains Lean code.
 
-## Second-order optimality and PH moments
+## Second- and third-order optimality
 
 The general second-order bound `r ≤ 2 * s` is proved in
 `SSPRK.second_order_rk_ssp_bound` in [SecondOrder.lean](lean/SSPRK/SecondOrder.lean).
@@ -15,6 +15,12 @@ this bound, and `SSPRK.second_order_optimal_radius` proves that the optimal radi
 over all second-order tableaux with $s>0$ stages is exactly $2s$.
 `SSPRK.second_order_unique_of_radius_eq` proves that every attaining tableau is this
 midpoint family up to a simultaneous permutation of stages.
+
+For $s\geq2$, `SSPRK.third_order_optimal_radius` proves the numerical third-order optimum
+$s-1+\sqrt{s^2-1}$. The general upper bound uses the PH third-moment inequality with actual
+probability integrals. The SDIRK family satisfies all four classical order-three conditions
+and attains this complete radius. `SSPRK.third_order_unique_of_radius_eq` proves that every
+attaining tableau is this family up to a simultaneous permutation of stages.
 
 Finite phase-type probability measures are constructed as countable Erlang mixtures with
 an optional atom at zero. General finite nonsingular subgenerators admit this construction
@@ -28,16 +34,21 @@ The minimum-variance inequality is proved for these actual measures. Feasible RK
 produce PH laws with mean $r$ and variance $2r$ under the two order conditions.
 Endpoint feasibility and downward closure of the complete SSP conditions are also proved.
 See [the proof explanation](docs/second-order-proof.md) and
+[the third-order proof correspondence](docs/third-order-proof.md), together with
 [the source correspondence and remaining work](docs/formalization-status.md).
 
-Validated with Lean 4.30.0: `lake build` succeeds, project Lean sources contain no proof
-placeholders, and the checked main theorems use only `propext`, `Classical.choice`, and
+Validated with Lean 4.30.0: the integrated `lake build` succeeds, integrated modules contain
+no proof placeholders, and the checked main theorems use only `propext`, `Classical.choice`, and
 `Quot.sound`. No custom probability axiom is assumed.
 
-Third-order optimality remains open. Variance equality now determines the full equal-rate
-chain representation and its single initial state. The PH measure is proved independent of
-the chosen uniformization rate. Matrix-exponential survival/density formulas and identification
-with a CTMC path law remain to be proved.
+Variance equality determines the full equal-rate chain representation and its single initial
+state, and is equivalent to an Erlang law. The PH measure is proved independent of
+the chosen uniformization rate. Matrix-exponential density, survival and CDF formulas
+are proved. The actual canonical CTMC jump-record process absorbs almost surely, and
+its absorption-time law equals the constructed PH measure; all generator moment formulas
+therefore hold for that random variable. A jointly measurable continuous-time path stays
+absorbed after its first zero-state time. Its state occupations recover the actual stopped
+path integrals, and deleting the first state's occupation gives the Schur-complement PH law.
 
 ## Build
 
@@ -74,6 +85,20 @@ lake build
   measure and sharp variance formula.
 - `lean/SSPRK/PhaseTypeVariance.lean`, `RKPhaseType.lean`: the PH variance bound
   and its probability-law connection to RK tableaux.
-- `lean/SSPRK/MomentAlgebra.lean`: independent-sum moment inequalities for later work.
+- `lean/SSPRK/MomentAlgebra.lean`, `MomentAlgebraEquality.lean`, `MomentMixture.lean`:
+  sum and mixture moment inequalities and their equality conditions.
+- `lean/SSPRK/PhaseTypeThirdMoment.lean`, `PhaseTypeThirdMomentIntegral.lean`:
+  the state-count induction and the actual PH third-moment inequality.
+- `lean/SSPRK/ThirdOrder.lean`, `ThirdOrderOptimality.lean`: the general third-order
+  complete-radius bound and numerical optimum.
+- `lean/SSPRK/ThirdOrderUniqueness.lean`: full third-order optimizer uniqueness.
+- `lean/SSPRK/SDIRKOrder.lean`, `SDIRKAttainment.lean`: all four order-three conditions
+  and the explicit feasible SDIRK family.
+- `lean/SSPRK/AuxiliaryScale.lean`, `ScaledExponential.lean`, `AuxiliaryLaw.lean`:
+  a nonnegative probability law realizing the three state-elimination correction moments.
+- `lean/SSPRK/PhaseTypeAuxiliary.lean`, `MomentConvolution.lean`: the actual independent
+  convolution matching the first three PH integral moments.
+- `lean/SSPRK/LengthBias.lean`: the length-biased law and its normalized variance identity.
+- `lean/SSPRK/PhaseTypeDensity.lean`: the matrix-exponential PH density formula.
 - `lean/Main.lean`: imports the modules checked by the default build.
 - `lean/lean-toolchain` and `lean/lake-manifest.json`: pinned environment.
