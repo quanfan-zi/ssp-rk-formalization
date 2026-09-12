@@ -1,0 +1,4166 @@
+{
+  "sourceRevision": "a784414ad1cdb22ae9e868a8e829e80b9b035b23",
+  "paper": "docs/V1.6.pdf",
+  "paperSha256": "9ae32035fae9df6401a6759df4409804b1104a175f3f1fa99e478491e975a0c9",
+  "leanToolchain": "leanprover/lean4:v4.30.0",
+  "graphSemantics": "Project-owned constants in elaborated types and values; value edges preferred when both kinds exist; null means no path.",
+  "limits": "Not a semantic equivalence certificate. Imports and existence alone are not proof-route evidence. Build before generating the graph.",
+  "projectDeclarations": 1620,
+  "coreEntries": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "name": "SSPRK.second_order_rk_ssp_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "name": "SSPRK.third_order_rk_ssp_bound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "name": "SSPRK.second_order_unique_at_twice_stages"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "name": "SSPRK.third_order_unique_at_radius"
+    }
+  ],
+  "analyses": [
+    {
+      "root": "SSPRK.second_order_rk_ssp_bound",
+      "reachableProjectConstantsIncludingRoot": 54,
+      "queries": {
+        "SSPRK.rkP_substochastic": {
+          "path": [
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkP_substochastic"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.rkN_nonneg": {
+          "path": [
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkN_nonneg"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_ones_eq": {
+          "path": [
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkOmega_N_ones_eq"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_sq_ones_eq": {
+          "path": [
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkOmega_N_sq_ones_eq"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_cu_ones_eq": null,
+        "SSPRK.exists_variance_potential": {
+          "path": [
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.phase_second_moment_bound",
+            "SSPRK.exists_variance_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_variance_pointwise_of_potential": {
+          "path": [
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.phase_second_moment_bound",
+            "SSPRK.phase_second_moment_bound_of_potential",
+            "SSPRK.phase_variance_pointwise_of_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_second_moment_bound": {
+          "path": [
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.phase_second_moment_bound"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.phase_mixture_chain_classification_of_pos": null,
+        "SSPRK.AbsolutelyMonotoneAt.phaseType": null,
+        "SSPRK.PhaseTypeData.third_moment_lower_bound": null,
+        "SSPRK.PhaseTypeData.green_moment_class": null,
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": null,
+        "SSPRK.PhaseTypeData.eliminateZero": null,
+        "SSPRK.PhaseTypeData.normalizedGreen": null,
+        "SSPRK.phaseBlock_third_moment": null,
+        "SSPRK.MomentClass.add": null,
+        "SSPRK.MomentClass.finite_mixture": null,
+        "SSPRK.length_biased_component_bound": null,
+        "SSPRK.auxiliary_moment_class": null,
+        "SSPRK.PhaseTypeData.normalized_independent_replacement": null,
+        "SSPRK.lengthBias_normalized_variance": null,
+        "SSPRK.lengthBias_independentSumLaw": null,
+        "SSPRK.lengthBias_probabilityMomentMixture": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": null,
+        "SSPRK.PhaseTypeData.third_equality_representation": null,
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": null,
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": null,
+        "SSPRK.eq_midpoint_of_sorted_transform": null,
+        "SSPRK.eq_sdirk_of_sorted_transform": null,
+        "SSPRK.second_order_classification_at_bound": null,
+        "SSPRK.third_order_classification_at_bound": null,
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": null,
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": null
+      }
+    },
+    {
+      "root": "SSPRK.third_order_rk_ssp_bound",
+      "reachableProjectConstantsIncludingRoot": 240,
+      "queries": {
+        "SSPRK.rkP_substochastic": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_2",
+            "SSPRK.rkP_substochastic"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkN_nonneg": null,
+        "SSPRK.rkOmega_N_ones_eq": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_id",
+            "SSPRK.rkOmega_N_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_sq_ones_eq": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_sq",
+            "SSPRK.rkOmega_N_sq_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_cu_ones_eq": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_cube",
+            "SSPRK.rkOmega_N_cu_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.exists_variance_potential": null,
+        "SSPRK.phase_variance_pointwise_of_potential": null,
+        "SSPRK.phase_second_moment_bound": null,
+        "SSPRK.phase_mixture_chain_classification_of_pos": null,
+        "SSPRK.AbsolutelyMonotoneAt.phaseType": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.third_moment_lower_bound": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_moment_class": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.eliminateZero": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.eliminateZero"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalizedGreen": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.normalizedGreen"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phaseBlock_third_moment": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.phaseBlock_third_moment"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.MomentClass.add": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.MomentClass.add"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.MomentClass.finite_mixture": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class_of_rows",
+            "SSPRK.MomentClass.finite_mixture"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.length_biased_component_bound": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.MomentClass.add",
+            "SSPRK.third_moment_add",
+            "SSPRK.length_biased_component_bound"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.auxiliary_moment_class": {
+          "path": [
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.auxiliary_moment_class"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalized_independent_replacement": null,
+        "SSPRK.lengthBias_normalized_variance": null,
+        "SSPRK.lengthBias_independentSumLaw": null,
+        "SSPRK.lengthBias_probabilityMomentMixture": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": null,
+        "SSPRK.PhaseTypeData.third_equality_representation": null,
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": null,
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": null,
+        "SSPRK.eq_midpoint_of_sorted_transform": null,
+        "SSPRK.eq_sdirk_of_sorted_transform": null,
+        "SSPRK.second_order_classification_at_bound": null,
+        "SSPRK.third_order_classification_at_bound": null,
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": null,
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": null
+      }
+    },
+    {
+      "root": "SSPRK.second_order_unique_at_twice_stages",
+      "reachableProjectConstantsIncludingRoot": 126,
+      "queries": {
+        "SSPRK.rkP_substochastic": {
+          "path": [
+            "SSPRK.second_order_unique_at_twice_stages",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.rkP_substochastic"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkN_nonneg": {
+          "path": [
+            "SSPRK.second_order_unique_at_twice_stages",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.rkN_nonneg"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_ones_eq": {
+          "path": [
+            "SSPRK.second_order_unique_at_twice_stages",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.rkOmega_N_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_sq_ones_eq": {
+          "path": [
+            "SSPRK.second_order_unique_at_twice_stages",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.rkOmega_N_sq_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_cu_ones_eq": null,
+        "SSPRK.exists_variance_potential": {
+          "path": [
+            "SSPRK.second_order_unique_at_twice_stages",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.phase_mixture_chain_classification_of_pos",
+            "SSPRK.phase_mixture_chain_classification",
+            "SSPRK.exists_variance_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_variance_pointwise_of_potential": {
+          "path": [
+            "SSPRK.second_order_unique_at_twice_stages",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.phase_mixture_chain_classification_of_pos",
+            "SSPRK.phase_mixture_chain_classification",
+            "SSPRK.phase_variance_pointwise_of_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_second_moment_bound": null,
+        "SSPRK.phase_mixture_chain_classification_of_pos": {
+          "path": [
+            "SSPRK.second_order_unique_at_twice_stages",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.phase_mixture_chain_classification_of_pos"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.AbsolutelyMonotoneAt.phaseType": null,
+        "SSPRK.PhaseTypeData.third_moment_lower_bound": null,
+        "SSPRK.PhaseTypeData.green_moment_class": null,
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": null,
+        "SSPRK.PhaseTypeData.eliminateZero": null,
+        "SSPRK.PhaseTypeData.normalizedGreen": null,
+        "SSPRK.phaseBlock_third_moment": null,
+        "SSPRK.MomentClass.add": null,
+        "SSPRK.MomentClass.finite_mixture": null,
+        "SSPRK.length_biased_component_bound": null,
+        "SSPRK.auxiliary_moment_class": null,
+        "SSPRK.PhaseTypeData.normalized_independent_replacement": null,
+        "SSPRK.lengthBias_normalized_variance": null,
+        "SSPRK.lengthBias_independentSumLaw": null,
+        "SSPRK.lengthBias_probabilityMomentMixture": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": null,
+        "SSPRK.PhaseTypeData.third_equality_representation": null,
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": null,
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": null,
+        "SSPRK.eq_midpoint_of_sorted_transform": {
+          "path": [
+            "SSPRK.second_order_unique_at_twice_stages",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.eq_midpoint_of_sorted_transform"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.eq_sdirk_of_sorted_transform": null,
+        "SSPRK.second_order_classification_at_bound": {
+          "path": [
+            "SSPRK.second_order_unique_at_twice_stages",
+            "SSPRK.second_order_classification_at_bound"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.third_order_classification_at_bound": null,
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": null,
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": null
+      }
+    },
+    {
+      "root": "SSPRK.third_order_unique_at_radius",
+      "reachableProjectConstantsIncludingRoot": 308,
+      "queries": {
+        "SSPRK.rkP_substochastic": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_2",
+            "SSPRK.rkP_substochastic"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkN_nonneg": null,
+        "SSPRK.rkOmega_N_ones_eq": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.rkOmega_N_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_sq_ones_eq": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.rkOmega_N_sq_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_cu_ones_eq": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.rkOmega_N_cu_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.exists_variance_potential": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.mass_second_equality_representation",
+            "SSPRK.phase_mixture_chain_classification_of_pos",
+            "SSPRK.phase_mixture_chain_classification",
+            "SSPRK.exists_variance_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_variance_pointwise_of_potential": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.mass_second_equality_representation",
+            "SSPRK.phase_mixture_chain_classification_of_pos",
+            "SSPRK.phase_mixture_chain_classification",
+            "SSPRK.phase_variance_pointwise_of_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_second_moment_bound": null,
+        "SSPRK.phase_mixture_chain_classification_of_pos": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.mass_second_equality_representation",
+            "SSPRK.phase_mixture_chain_classification_of_pos"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.AbsolutelyMonotoneAt.phaseType": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.third_moment_lower_bound": null,
+        "SSPRK.PhaseTypeData.green_moment_class": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.eliminateZero": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.eliminateZero"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalizedGreen": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.normalizedGreen"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phaseBlock_third_moment": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq",
+            "SSPRK.phaseBlock_third_moment"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.MomentClass.add": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.MomentClass.add"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.MomentClass.finite_mixture": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class_of_rows",
+            "SSPRK.MomentClass.finite_mixture"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.length_biased_component_bound": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq",
+            "SSPRK.third_moment_add_eq_conditions",
+            "SSPRK.length_biased_component_bound"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.auxiliary_moment_class": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq",
+            "SSPRK.auxiliary_moment_class"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalized_independent_replacement": null,
+        "SSPRK.lengthBias_normalized_variance": null,
+        "SSPRK.lengthBias_independentSumLaw": null,
+        "SSPRK.lengthBias_probabilityMomentMixture": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": null,
+        "SSPRK.PhaseTypeData.third_equality_representation": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": null,
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": null,
+        "SSPRK.eq_midpoint_of_sorted_transform": null,
+        "SSPRK.eq_sdirk_of_sorted_transform": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.eq_sdirk_of_sorted_transform"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.second_order_classification_at_bound": null,
+        "SSPRK.third_order_classification_at_bound": {
+          "path": [
+            "SSPRK.third_order_unique_at_radius",
+            "SSPRK.third_order_classification_at_bound"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": null,
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": null
+      }
+    },
+    {
+      "root": "SSPRK.second_order_radius_bound",
+      "reachableProjectConstantsIncludingRoot": 64,
+      "queries": {
+        "SSPRK.rkP_substochastic": {
+          "path": [
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkP_substochastic"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkN_nonneg": {
+          "path": [
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkN_nonneg"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_ones_eq": {
+          "path": [
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkOmega_N_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_sq_ones_eq": {
+          "path": [
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkOmega_N_sq_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_cu_ones_eq": null,
+        "SSPRK.exists_variance_potential": {
+          "path": [
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.phase_second_moment_bound",
+            "SSPRK.exists_variance_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_variance_pointwise_of_potential": {
+          "path": [
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.phase_second_moment_bound",
+            "SSPRK.phase_second_moment_bound_of_potential",
+            "SSPRK.phase_variance_pointwise_of_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_second_moment_bound": {
+          "path": [
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.phase_second_moment_bound"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_mixture_chain_classification_of_pos": null,
+        "SSPRK.AbsolutelyMonotoneAt.phaseType": null,
+        "SSPRK.PhaseTypeData.third_moment_lower_bound": null,
+        "SSPRK.PhaseTypeData.green_moment_class": null,
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": null,
+        "SSPRK.PhaseTypeData.eliminateZero": null,
+        "SSPRK.PhaseTypeData.normalizedGreen": null,
+        "SSPRK.phaseBlock_third_moment": null,
+        "SSPRK.MomentClass.add": null,
+        "SSPRK.MomentClass.finite_mixture": null,
+        "SSPRK.length_biased_component_bound": null,
+        "SSPRK.auxiliary_moment_class": null,
+        "SSPRK.PhaseTypeData.normalized_independent_replacement": null,
+        "SSPRK.lengthBias_normalized_variance": null,
+        "SSPRK.lengthBias_independentSumLaw": null,
+        "SSPRK.lengthBias_probabilityMomentMixture": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": null,
+        "SSPRK.PhaseTypeData.third_equality_representation": null,
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": null,
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": null,
+        "SSPRK.eq_midpoint_of_sorted_transform": null,
+        "SSPRK.eq_sdirk_of_sorted_transform": null,
+        "SSPRK.second_order_classification_at_bound": null,
+        "SSPRK.third_order_classification_at_bound": null,
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": null,
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": null
+      }
+    },
+    {
+      "root": "SSPRK.third_order_radius_bound",
+      "reachableProjectConstantsIncludingRoot": 243,
+      "queries": {
+        "SSPRK.rkP_substochastic": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_2",
+            "SSPRK.rkP_substochastic"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkN_nonneg": null,
+        "SSPRK.rkOmega_N_ones_eq": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_id",
+            "SSPRK.rkOmega_N_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_sq_ones_eq": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_sq",
+            "SSPRK.rkOmega_N_sq_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_cu_ones_eq": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_cube",
+            "SSPRK.rkOmega_N_cu_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.exists_variance_potential": null,
+        "SSPRK.phase_variance_pointwise_of_potential": null,
+        "SSPRK.phase_second_moment_bound": null,
+        "SSPRK.phase_mixture_chain_classification_of_pos": null,
+        "SSPRK.AbsolutelyMonotoneAt.phaseType": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.third_moment_lower_bound": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_moment_class": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.eliminateZero": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.eliminateZero"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalizedGreen": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.normalizedGreen"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phaseBlock_third_moment": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.phaseBlock_third_moment"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.MomentClass.add": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.MomentClass.add"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.MomentClass.finite_mixture": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class_of_rows",
+            "SSPRK.MomentClass.finite_mixture"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.length_biased_component_bound": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.MomentClass.add",
+            "SSPRK.third_moment_add",
+            "SSPRK.length_biased_component_bound"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.auxiliary_moment_class": {
+          "path": [
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.auxiliary_moment_class"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalized_independent_replacement": null,
+        "SSPRK.lengthBias_normalized_variance": null,
+        "SSPRK.lengthBias_independentSumLaw": null,
+        "SSPRK.lengthBias_probabilityMomentMixture": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": null,
+        "SSPRK.PhaseTypeData.third_equality_representation": null,
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": null,
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": null,
+        "SSPRK.eq_midpoint_of_sorted_transform": null,
+        "SSPRK.eq_sdirk_of_sorted_transform": null,
+        "SSPRK.second_order_classification_at_bound": null,
+        "SSPRK.third_order_classification_at_bound": null,
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": null,
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": null
+      }
+    },
+    {
+      "root": "SSPRK.second_order_optimal_radius",
+      "reachableProjectConstantsIncludingRoot": 111,
+      "queries": {
+        "SSPRK.rkP_substochastic": {
+          "path": [
+            "SSPRK.second_order_optimal_radius",
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkP_substochastic"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkN_nonneg": {
+          "path": [
+            "SSPRK.second_order_optimal_radius",
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkN_nonneg"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_ones_eq": {
+          "path": [
+            "SSPRK.second_order_optimal_radius",
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkOmega_N_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_sq_ones_eq": {
+          "path": [
+            "SSPRK.second_order_optimal_radius",
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.rkOmega_N_sq_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_cu_ones_eq": null,
+        "SSPRK.exists_variance_potential": {
+          "path": [
+            "SSPRK.second_order_optimal_radius",
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.phase_second_moment_bound",
+            "SSPRK.exists_variance_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_variance_pointwise_of_potential": {
+          "path": [
+            "SSPRK.second_order_optimal_radius",
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.phase_second_moment_bound",
+            "SSPRK.phase_second_moment_bound_of_potential",
+            "SSPRK.phase_variance_pointwise_of_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_second_moment_bound": {
+          "path": [
+            "SSPRK.second_order_optimal_radius",
+            "SSPRK.second_order_radius_bound",
+            "SSPRK.feasibleRadii_le_second_order",
+            "SSPRK.second_order_rk_ssp_bound",
+            "SSPRK.phase_second_moment_bound"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_mixture_chain_classification_of_pos": null,
+        "SSPRK.AbsolutelyMonotoneAt.phaseType": null,
+        "SSPRK.PhaseTypeData.third_moment_lower_bound": null,
+        "SSPRK.PhaseTypeData.green_moment_class": null,
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": null,
+        "SSPRK.PhaseTypeData.eliminateZero": null,
+        "SSPRK.PhaseTypeData.normalizedGreen": null,
+        "SSPRK.phaseBlock_third_moment": null,
+        "SSPRK.MomentClass.add": null,
+        "SSPRK.MomentClass.finite_mixture": null,
+        "SSPRK.length_biased_component_bound": null,
+        "SSPRK.auxiliary_moment_class": null,
+        "SSPRK.PhaseTypeData.normalized_independent_replacement": null,
+        "SSPRK.lengthBias_normalized_variance": null,
+        "SSPRK.lengthBias_independentSumLaw": null,
+        "SSPRK.lengthBias_probabilityMomentMixture": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": null,
+        "SSPRK.PhaseTypeData.third_equality_representation": null,
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": null,
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": null,
+        "SSPRK.eq_midpoint_of_sorted_transform": null,
+        "SSPRK.eq_sdirk_of_sorted_transform": null,
+        "SSPRK.second_order_classification_at_bound": null,
+        "SSPRK.third_order_classification_at_bound": null,
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": null,
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": null
+      }
+    },
+    {
+      "root": "SSPRK.third_order_optimal_radius",
+      "reachableProjectConstantsIncludingRoot": 327,
+      "queries": {
+        "SSPRK.rkP_substochastic": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_2",
+            "SSPRK.rkP_substochastic"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkN_nonneg": null,
+        "SSPRK.rkOmega_N_ones_eq": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_id",
+            "SSPRK.rkOmega_N_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_sq_ones_eq": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_sq",
+            "SSPRK.rkOmega_N_sq_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_cu_ones_eq": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_cube",
+            "SSPRK.rkOmega_N_cu_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.exists_variance_potential": null,
+        "SSPRK.phase_variance_pointwise_of_potential": null,
+        "SSPRK.phase_second_moment_bound": null,
+        "SSPRK.phase_mixture_chain_classification_of_pos": null,
+        "SSPRK.AbsolutelyMonotoneAt.phaseType": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.third_moment_lower_bound": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_moment_class": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.eliminateZero": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.eliminateZero"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalizedGreen": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.normalizedGreen"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phaseBlock_third_moment": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.phaseBlock_third_moment"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.MomentClass.add": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.MomentClass.add"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.MomentClass.finite_mixture": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class_of_rows",
+            "SSPRK.MomentClass.finite_mixture"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.length_biased_component_bound": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.MomentClass.add",
+            "SSPRK.third_moment_add",
+            "SSPRK.length_biased_component_bound"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.auxiliary_moment_class": {
+          "path": [
+            "SSPRK.third_order_optimal_radius",
+            "SSPRK.third_order_radius_bound",
+            "SSPRK.third_order_rk_ssp_bound",
+            "SSPRK.PhaseTypeData.third_moment_lower_bound",
+            "SSPRK.PhaseTypeData.integral_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.auxiliary_moment_class"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalized_independent_replacement": null,
+        "SSPRK.lengthBias_normalized_variance": null,
+        "SSPRK.lengthBias_independentSumLaw": null,
+        "SSPRK.lengthBias_probabilityMomentMixture": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": null,
+        "SSPRK.PhaseTypeData.third_equality_representation": null,
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": null,
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": null,
+        "SSPRK.eq_midpoint_of_sorted_transform": null,
+        "SSPRK.eq_sdirk_of_sorted_transform": null,
+        "SSPRK.second_order_classification_at_bound": null,
+        "SSPRK.third_order_classification_at_bound": null,
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": null,
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": null
+      }
+    },
+    {
+      "root": "SSPRK.second_order_unique_of_radius_eq",
+      "reachableProjectConstantsIncludingRoot": 136,
+      "queries": {
+        "SSPRK.rkP_substochastic": {
+          "path": [
+            "SSPRK.second_order_unique_of_radius_eq",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.rkP_substochastic"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkN_nonneg": {
+          "path": [
+            "SSPRK.second_order_unique_of_radius_eq",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.rkN_nonneg"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_ones_eq": {
+          "path": [
+            "SSPRK.second_order_unique_of_radius_eq",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.rkOmega_N_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_sq_ones_eq": {
+          "path": [
+            "SSPRK.second_order_unique_of_radius_eq",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.rkOmega_N_sq_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_cu_ones_eq": null,
+        "SSPRK.exists_variance_potential": {
+          "path": [
+            "SSPRK.second_order_unique_of_radius_eq",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.phase_mixture_chain_classification_of_pos",
+            "SSPRK.phase_mixture_chain_classification",
+            "SSPRK.exists_variance_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_variance_pointwise_of_potential": {
+          "path": [
+            "SSPRK.second_order_unique_of_radius_eq",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.phase_mixture_chain_classification_of_pos",
+            "SSPRK.phase_mixture_chain_classification",
+            "SSPRK.phase_variance_pointwise_of_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_second_moment_bound": null,
+        "SSPRK.phase_mixture_chain_classification_of_pos": {
+          "path": [
+            "SSPRK.second_order_unique_of_radius_eq",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.phase_mixture_chain_classification_of_pos"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.AbsolutelyMonotoneAt.phaseType": null,
+        "SSPRK.PhaseTypeData.third_moment_lower_bound": null,
+        "SSPRK.PhaseTypeData.green_moment_class": null,
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": null,
+        "SSPRK.PhaseTypeData.eliminateZero": null,
+        "SSPRK.PhaseTypeData.normalizedGreen": null,
+        "SSPRK.phaseBlock_third_moment": null,
+        "SSPRK.MomentClass.add": null,
+        "SSPRK.MomentClass.finite_mixture": null,
+        "SSPRK.length_biased_component_bound": null,
+        "SSPRK.auxiliary_moment_class": null,
+        "SSPRK.PhaseTypeData.normalized_independent_replacement": null,
+        "SSPRK.lengthBias_normalized_variance": null,
+        "SSPRK.lengthBias_independentSumLaw": null,
+        "SSPRK.lengthBias_probabilityMomentMixture": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": null,
+        "SSPRK.PhaseTypeData.third_equality_representation": null,
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": null,
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": null,
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": {
+          "path": [
+            "SSPRK.second_order_unique_of_radius_eq",
+            "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.eq_midpoint_of_sorted_transform": {
+          "path": [
+            "SSPRK.second_order_unique_of_radius_eq",
+            "SSPRK.second_order_classification_at_bound",
+            "SSPRK.eq_midpoint_of_sorted_transform"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.eq_sdirk_of_sorted_transform": null,
+        "SSPRK.second_order_classification_at_bound": {
+          "path": [
+            "SSPRK.second_order_unique_of_radius_eq",
+            "SSPRK.second_order_classification_at_bound"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.third_order_classification_at_bound": null,
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": null,
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": null
+      }
+    },
+    {
+      "root": "SSPRK.third_order_unique_of_radius_eq",
+      "reachableProjectConstantsIncludingRoot": 318,
+      "queries": {
+        "SSPRK.rkP_substochastic": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_2",
+            "SSPRK.rkP_substochastic"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkN_nonneg": null,
+        "SSPRK.rkOmega_N_ones_eq": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.rkOmega_N_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_sq_ones_eq": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.rkOmega_N_sq_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.rkOmega_N_cu_ones_eq": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.rkOmega_N_cu_ones_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.exists_variance_potential": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.mass_second_equality_representation",
+            "SSPRK.phase_mixture_chain_classification_of_pos",
+            "SSPRK.phase_mixture_chain_classification",
+            "SSPRK.exists_variance_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_variance_pointwise_of_potential": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.mass_second_equality_representation",
+            "SSPRK.phase_mixture_chain_classification_of_pos",
+            "SSPRK.phase_mixture_chain_classification",
+            "SSPRK.phase_variance_pointwise_of_potential"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phase_second_moment_bound": null,
+        "SSPRK.phase_mixture_chain_classification_of_pos": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.mass_second_equality_representation",
+            "SSPRK.phase_mixture_chain_classification_of_pos"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.AbsolutelyMonotoneAt.phaseType": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.AbsolutelyMonotoneAt.phaseType"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.third_moment_lower_bound": null,
+        "SSPRK.PhaseTypeData.green_moment_class": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.eliminateZero": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.eliminateZero"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalizedGreen": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.normalizedGreen"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.phaseBlock_third_moment": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq",
+            "SSPRK.phaseBlock_third_moment"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.MomentClass.add": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+            "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+            "SSPRK.MomentClass.add"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.MomentClass.finite_mixture": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class",
+            "SSPRK.PhaseTypeData.green_moment_class_of_rows",
+            "SSPRK.MomentClass.finite_mixture"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.length_biased_component_bound": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq",
+            "SSPRK.third_moment_add_eq_conditions",
+            "SSPRK.length_biased_component_bound"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.auxiliary_moment_class": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq",
+            "SSPRK.auxiliary_moment_class"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalized_independent_replacement": null,
+        "SSPRK.lengthBias_normalized_variance": null,
+        "SSPRK.lengthBias_independentSumLaw": null,
+        "SSPRK.lengthBias_probabilityMomentMixture": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": null,
+        "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": null,
+        "SSPRK.PhaseTypeData.third_equality_representation": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.PhaseTypeData.third_equality_representation",
+            "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+            "SSPRK.PhaseTypeData.green_second_eq_of_third_eq"
+          ],
+          "edgeKinds": [
+            "value",
+            "value",
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": null,
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": null,
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.eq_midpoint_of_sorted_transform": null,
+        "SSPRK.eq_sdirk_of_sorted_transform": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound",
+            "SSPRK.eq_sdirk_of_sorted_transform"
+          ],
+          "edgeKinds": [
+            "value",
+            "value"
+          ]
+        },
+        "SSPRK.second_order_classification_at_bound": null,
+        "SSPRK.third_order_classification_at_bound": {
+          "path": [
+            "SSPRK.third_order_unique_of_radius_eq",
+            "SSPRK.third_order_classification_at_bound"
+          ],
+          "edgeKinds": [
+            "value"
+          ]
+        },
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": null,
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": null
+      }
+    }
+  ],
+  "witnessNodes": {
+    "SSPRK.AbsolutelyMonotoneAt.phaseType": {
+      "kind": "other",
+      "lines": [
+        19,
+        30
+      ],
+      "module": "SSPRK.RKPhaseType",
+      "name": "SSPRK.AbsolutelyMonotoneAt.phaseType",
+      "typeDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.PhaseTypeData"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.rkOmega",
+        "SSPRK.rkP",
+        "SSPRK.PhaseTypeData.mk",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_1",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_2",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_3",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_4",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_5"
+      ]
+    },
+    "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_2": {
+      "kind": "theorem",
+      "lines": null,
+      "module": "SSPRK.RKPhaseType",
+      "name": "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_2",
+      "typeDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.Substochastic",
+        "SSPRK.rkP"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.rkP_substochastic",
+        "SSPRK.AbsolutelyMonotoneAt.det_ne_zero",
+        "SSPRK.AbsolutelyMonotoneAt.matrix_nonneg",
+        "SSPRK.AbsolutelyMonotoneAt.stages"
+      ]
+    },
+    "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_cube": {
+      "kind": "theorem",
+      "lines": [
+        21,
+        34
+      ],
+      "module": "SSPRK.RKThirdMoment",
+      "name": "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_cube",
+      "typeDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType",
+        "SSPRK.PhaseTypeData.measure"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.ones",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_N_cu_ones_eq",
+        "SSPRK.rkP",
+        "SSPRK.AbsolutelyMonotoneAt.det_ne_zero",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType_green",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.integral_pow_measure",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.mk",
+        "SSPRK.PhaseTypeData.rate",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_1",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_2",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_3",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_4",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_5"
+      ]
+    },
+    "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_id": {
+      "kind": "theorem",
+      "lines": [
+        47,
+        53
+      ],
+      "module": "SSPRK.RKPhaseType",
+      "name": "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_id",
+      "typeDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType",
+        "SSPRK.PhaseTypeData.measure"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_N_ones_eq",
+        "SSPRK.AbsolutelyMonotoneAt.det_ne_zero",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType_green",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.integral_id_measure",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.rate"
+      ]
+    },
+    "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_sq": {
+      "kind": "theorem",
+      "lines": [
+        55,
+        65
+      ],
+      "module": "SSPRK.RKPhaseType",
+      "name": "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_sq",
+      "typeDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType",
+        "SSPRK.PhaseTypeData.measure"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.ones",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_N_sq_ones_eq",
+        "SSPRK.AbsolutelyMonotoneAt.det_ne_zero",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType_green",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.integral_sq_measure",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.rate"
+      ]
+    },
+    "SSPRK.MomentClass.add": {
+      "kind": "theorem",
+      "lines": [
+        91,
+        100
+      ],
+      "module": "SSPRK.MomentAlgebra",
+      "name": "SSPRK.MomentClass.add",
+      "typeDependencies": [
+        "SSPRK.MomentClass"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.second_moment_add",
+        "SSPRK.third_moment_add",
+        "SSPRK.MomentClass.mean_pos",
+        "SSPRK.MomentClass.mk",
+        "SSPRK.MomentClass.parameter_pos",
+        "SSPRK.MomentClass.second_bound",
+        "SSPRK.MomentClass.second_nonneg",
+        "SSPRK.MomentClass.third_nonneg"
+      ]
+    },
+    "SSPRK.MomentClass.finite_mixture": {
+      "kind": "theorem",
+      "lines": [
+        28,
+        48
+      ],
+      "module": "SSPRK.MomentMixture",
+      "name": "SSPRK.MomentClass.finite_mixture",
+      "typeDependencies": [
+        "SSPRK.MomentClass"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.weighted_quadratic_bound",
+        "SSPRK.MomentClass.mean_pos",
+        "SSPRK.MomentClass.mk",
+        "SSPRK.MomentClass.parameter_pos",
+        "SSPRK.MomentClass.second_bound",
+        "SSPRK.MomentClass.second_nonneg",
+        "SSPRK.MomentClass.third_bound",
+        "SSPRK.MomentClass.third_nonneg"
+      ]
+    },
+    "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime": {
+      "kind": "theorem",
+      "lines": [
+        41,
+        67
+      ],
+      "module": "SSPRK.PhaseTypeAbsorptionLaw",
+      "name": "SSPRK.PhaseTypeData.canonicalRecords_map_absorptionTime",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.Records",
+        "SSPRK.PhaseTypeData.canonicalRecords",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.recordAbsorptionTime"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "MeasureTheory.Measure.ext_of_laplace_eq_of_ae_nonneg",
+        "SSPRK.PhaseTypeData.Records",
+        "SSPRK.PhaseTypeData.ae_nonneg_measure",
+        "SSPRK.PhaseTypeData.canonicalRecords",
+        "SSPRK.PhaseTypeData.canonicalRecords_firstAbsorptionIndex_ne_top_ae",
+        "SSPRK.PhaseTypeData.initialMeasure",
+        "SSPRK.PhaseTypeData.instIsProbabilityMeasureRealMeasure",
+        "SSPRK.PhaseTypeData.instIsProbabilityMeasureRecordsCanonicalRecords",
+        "SSPRK.PhaseTypeData.integral_initialMeasure_laplaceHarmonic",
+        "SSPRK.PhaseTypeData.integral_laplaceHarmonic_jumpHoldStepMeasureTotal",
+        "SSPRK.PhaseTypeData.integral_recordHarmonicIntegrand_eq_initial",
+        "SSPRK.PhaseTypeData.laplaceHarmonic",
+        "SSPRK.PhaseTypeData.laplaceHarmonic_le_one",
+        "SSPRK.PhaseTypeData.laplaceHarmonic_nonneg",
+        "SSPRK.PhaseTypeData.laplaceHarmonic_zero",
+        "SSPRK.PhaseTypeData.measurable_recordAbsorptionTime",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.recordAbsorptionTime",
+        "SSPRK.PhaseTypeData.recordClock",
+        "SSPRK.PhaseTypeData.tendsto_integral_record_laplace_observable"
+      ]
+    },
+    "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest": {
+      "kind": "theorem",
+      "lines": [
+        49,
+        59
+      ],
+      "module": "SSPRK.PhaseTypeOccupationLaw",
+      "name": "SSPRK.PhaseTypeData.canonicalRecords_map_occupationRest",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.Records",
+        "SSPRK.PhaseTypeData.canonicalRecords",
+        "SSPRK.PhaseTypeData.eliminateZero",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.recordOccupationRest",
+        "SSPRK.PhaseTypeData.startAt"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "MeasureTheory.Measure.ext_of_laplace_eq_of_ae_nonneg",
+        "SSPRK.PhaseTypeData.Records",
+        "SSPRK.PhaseTypeData.ae_nonneg_measure",
+        "SSPRK.PhaseTypeData.canonicalRecords",
+        "SSPRK.PhaseTypeData.canonicalRecords_occupationRest_nonneg",
+        "SSPRK.PhaseTypeData.eliminateZero",
+        "SSPRK.PhaseTypeData.instIsProbabilityMeasureRealMeasure",
+        "SSPRK.PhaseTypeData.instIsProbabilityMeasureRecordsCanonicalRecords",
+        "SSPRK.PhaseTypeData.integral_exp_neg_occupationRest",
+        "SSPRK.PhaseTypeData.measurable_recordOccupationRest",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.recordOccupationRest",
+        "SSPRK.PhaseTypeData.startAt"
+      ]
+    },
+    "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial": {
+      "kind": "theorem",
+      "lines": [
+        44,
+        50
+      ],
+      "module": "SSPRK.PhaseTypeConditioning",
+      "name": "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.normalizeInitial"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.measure_positive_eq_mass",
+        "SSPRK.PhaseTypeData.normalizeInitial",
+        "SSPRK.PhaseTypeData.restrict_positive_eq_smul_normalizeInitial"
+      ]
+    },
+    "SSPRK.PhaseTypeData.eliminateZero": {
+      "kind": "other",
+      "lines": [
+        121,
+        130
+      ],
+      "module": "SSPRK.PhaseTypeElimination",
+      "name": "SSPRK.PhaseTypeData.eliminateZero",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.eliminationInitial",
+        "SSPRK.PhaseTypeData.eliminationInitial_mass_le",
+        "SSPRK.PhaseTypeData.eliminationInitial_nonneg",
+        "SSPRK.PhaseTypeData.eliminationTransition",
+        "SSPRK.PhaseTypeData.eliminationTransition_substochastic",
+        "SSPRK.PhaseTypeData.eliminationTransition_transient",
+        "SSPRK.PhaseTypeData.mk",
+        "SSPRK.PhaseTypeData.rate",
+        "SSPRK.PhaseTypeData.eliminateZero._proof_1"
+      ]
+    },
+    "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma": {
+      "kind": "theorem",
+      "lines": [
+        86,
+        121
+      ],
+      "module": "SSPRK.PhaseTypeErlangRigidity",
+      "name": "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.chainD",
+        "SSPRK.PhaseTypeData.generator",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.measure"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.chainD",
+        "SSPRK.shiftDown",
+        "SSPRK.successor_reverse_eq_shiftDown",
+        "SSPRK.PhaseTypeData.eq_num_phases_and_charpoly_of_le_erlang_shape",
+        "SSPRK.PhaseTypeData.erlangUniformization",
+        "SSPRK.PhaseTypeData.erlangUniformization_generator",
+        "SSPRK.PhaseTypeData.erlangUniformization_mass",
+        "SSPRK.PhaseTypeData.erlangUniformization_measure",
+        "SSPRK.PhaseTypeData.erlangUniformization_transition_pow",
+        "SSPRK.PhaseTypeData.exists_ordered_chain_of_nilpotent_gamma",
+        "SSPRK.PhaseTypeData.generator",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.rate",
+        "SSPRK.PhaseTypeData.transition",
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma._proof_1_1"
+      ]
+    },
+    "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le": {
+      "kind": "theorem",
+      "lines": [
+        123,
+        133
+      ],
+      "module": "SSPRK.PhaseTypeErlangRigidity",
+      "name": "SSPRK.PhaseTypeData.erlang_rigidity_of_num_phases_le",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.chainD",
+        "SSPRK.PhaseTypeData.generator",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.measure"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.chainD",
+        "SSPRK.PhaseTypeData.eq_num_phases_and_charpoly_of_le_erlang_shape",
+        "SSPRK.PhaseTypeData.erlang_rigidity_of_measure_eq_gamma",
+        "SSPRK.PhaseTypeData.generator",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.measure"
+      ]
+    },
+    "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq": {
+      "kind": "theorem",
+      "lines": [
+        104,
+        130
+      ],
+      "module": "SSPRK.PhaseTypeThirdMixtureEquality",
+      "name": "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.mass"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.MomentClass.finite_mixture_second_eq_of_third_eq",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.initial_nonneg",
+        "SSPRK.PhaseTypeData.mass",
+        "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class"
+      ]
+    },
+    "SSPRK.PhaseTypeData.green_moment_class": {
+      "kind": "theorem",
+      "lines": [
+        216,
+        237
+      ],
+      "module": "SSPRK.PhaseTypeThirdMoment",
+      "name": "SSPRK.PhaseTypeData.green_moment_class",
+      "typeDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.green_moment_class_of_rows",
+        "SSPRK.PhaseTypeData.green_pow_mulVec_one_reindex",
+        "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.normalizedGreen_blockH_nonneg",
+        "SSPRK.PhaseTypeData.reindex",
+        "SSPRK.PhaseTypeData.green_moment_class._simp_1_1"
+      ]
+    },
+    "SSPRK.PhaseTypeData.green_moment_class_of_rows": {
+      "kind": "theorem",
+      "lines": [
+        48,
+        58
+      ],
+      "module": "SSPRK.PhaseTypeThirdMoment",
+      "name": "SSPRK.PhaseTypeData.green_moment_class_of_rows",
+      "typeDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.MomentClass.finite_mixture",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.initial_mass_le",
+        "SSPRK.PhaseTypeData.initial_nonneg"
+      ]
+    },
+    "SSPRK.PhaseTypeData.green_second_eq_of_third_eq": {
+      "kind": "theorem",
+      "lines": [
+        87,
+        108
+      ],
+      "module": "SSPRK.PhaseTypeThirdEquality",
+      "name": "SSPRK.PhaseTypeData.green_second_eq_of_third_eq",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.green_pow_mulVec_one_reindex",
+        "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+        "SSPRK.PhaseTypeData.reindex",
+        "SSPRK.PhaseTypeData.green_second_eq_of_third_eq._proof_1_1"
+      ]
+    },
+    "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction": {
+      "kind": "theorem",
+      "lines": [
+        178,
+        202
+      ],
+      "module": "SSPRK.PhaseTypeThirdMoment",
+      "name": "SSPRK.PhaseTypeData.green_zero_momentClass_of_induction",
+      "typeDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.phaseBlockH",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.normalizedGreen"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.phaseBlockH",
+        "SSPRK.phaseBlockMoment",
+        "SSPRK.phaseBlockU",
+        "SSPRK.phaseBlockZ1",
+        "SSPRK.phaseBlockZ2",
+        "SSPRK.phaseBlockZ3",
+        "SSPRK.MomentClass.scale",
+        "SSPRK.PhaseTypeData.eliminateZero",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.green_pivot_pos",
+        "SSPRK.PhaseTypeData.green_row_momentClass_of_normalized",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.normalizedGreen",
+        "SSPRK.PhaseTypeData.normalizedGreen_blockU_eq_zero",
+        "SSPRK.PhaseTypeData.normalizedGreen_eta1_nonneg",
+        "SSPRK.PhaseTypeData.normalizedGreen_eta2_nonneg",
+        "SSPRK.PhaseTypeData.normalizedGreen_nonneg",
+        "SSPRK.PhaseTypeData.normalizedGreen_z1",
+        "SSPRK.PhaseTypeData.normalizedGreen_z2",
+        "SSPRK.PhaseTypeData.normalizedGreen_z3",
+        "SSPRK.PhaseTypeData.normalizedGreen_zero_zero",
+        "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+        "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_upper_zero"
+      ]
+    },
+    "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq": {
+      "kind": "theorem",
+      "lines": [
+        61,
+        85
+      ],
+      "module": "SSPRK.PhaseTypeThirdEquality",
+      "name": "SSPRK.PhaseTypeData.green_zero_second_eq_of_third_eq",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.phaseBlockMoment",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.green_pivot_pos",
+        "SSPRK.PhaseTypeData.normalizedGreen",
+        "SSPRK.PhaseTypeData.normalizedGreen_phaseBlockMoment",
+        "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq"
+      ]
+    },
+    "SSPRK.PhaseTypeData.integral_moment_class": {
+      "kind": "theorem",
+      "lines": [
+        34,
+        41
+      ],
+      "module": "SSPRK.PhaseTypeThirdMomentIntegral",
+      "name": "SSPRK.PhaseTypeData.integral_moment_class",
+      "typeDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.measure"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.green_moment_class",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.integral_id_measure",
+        "SSPRK.PhaseTypeData.integral_momentClass_of_green",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.rate",
+        "SSPRK.PhaseTypeData.rate_pos"
+      ]
+    },
+    "SSPRK.PhaseTypeData.mass_second_equality_representation": {
+      "kind": "theorem",
+      "lines": [
+        24,
+        63
+      ],
+      "module": "SSPRK.PhaseTypeThirdLaw",
+      "name": "SSPRK.PhaseTypeData.mass_second_equality_representation",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.chainD",
+        "SSPRK.chainL",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.transition",
+        "SSPRK.PhaseTypeData.mass_second_equality_representation._proof_1"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.chainD",
+        "SSPRK.chainL",
+        "SSPRK.phase_mixture_chain_classification_of_pos",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.initial_mass_le",
+        "SSPRK.PhaseTypeData.initial_nonneg",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.mass_pos_of_green_mean_pos",
+        "SSPRK.PhaseTypeData.normalizeInitial",
+        "SSPRK.PhaseTypeData.normalizeInitial_green_moment",
+        "SSPRK.PhaseTypeData.substochastic",
+        "SSPRK.PhaseTypeData.transient",
+        "SSPRK.PhaseTypeData.transition",
+        "SSPRK.Substochastic.inv_nonneg",
+        "SSPRK.phase_mixture_chain_classification_of_pos._proof_1",
+        "SSPRK.PhaseTypeData.mass_second_equality_representation._proof_1",
+        "SSPRK.PhaseTypeData.mass_second_equality_representation._simp_1_1"
+      ]
+    },
+    "SSPRK.PhaseTypeData.normalizeInitial_integral_pow": {
+      "kind": "theorem",
+      "lines": [
+        73,
+        78
+      ],
+      "module": "SSPRK.PhaseTypeNormalization",
+      "name": "SSPRK.PhaseTypeData.normalizeInitial_integral_pow",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.normalizeInitial"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.integral_pow_measure",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.normalizeInitial",
+        "SSPRK.PhaseTypeData.normalizeInitial_green_moment",
+        "SSPRK.PhaseTypeData.normalizeInitial_rate",
+        "SSPRK.PhaseTypeData.rate"
+      ]
+    },
+    "SSPRK.PhaseTypeData.normalizedGreen": {
+      "kind": "other",
+      "lines": [
+        60,
+        62
+      ],
+      "module": "SSPRK.PhaseTypeThirdMoment",
+      "name": "SSPRK.PhaseTypeData.normalizedGreen",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.normalizedGreen._proof_1"
+      ]
+    },
+    "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq": {
+      "kind": "theorem",
+      "lines": [
+        10,
+        53
+      ],
+      "module": "SSPRK.PhaseTypeThirdEquality",
+      "name": "SSPRK.PhaseTypeData.normalizedGreen_second_eq_of_third_eq",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.phaseBlockMoment",
+        "SSPRK.PhaseTypeData.normalizedGreen"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.auxiliary_moment_class",
+        "SSPRK.phaseBlockEta1",
+        "SSPRK.phaseBlockEta2",
+        "SSPRK.phaseBlockH",
+        "SSPRK.phaseBlockMoment",
+        "SSPRK.phaseBlockU",
+        "SSPRK.phaseBlockV",
+        "SSPRK.phaseBlockW",
+        "SSPRK.phaseBlockZ1",
+        "SSPRK.phaseBlockZ2",
+        "SSPRK.phaseBlockZ3",
+        "SSPRK.phaseBlock_first_moment",
+        "SSPRK.phaseBlock_second_moment",
+        "SSPRK.phaseBlock_third_moment",
+        "SSPRK.third_moment_add_eq_conditions",
+        "SSPRK.MomentClass.parameter_pos",
+        "SSPRK.MomentClass.scale",
+        "SSPRK.PhaseTypeData.eliminateZero",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.green_moment_class",
+        "SSPRK.PhaseTypeData.green_pivot_pos",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.normalizedGreen",
+        "SSPRK.PhaseTypeData.normalizedGreen_blockH_nonneg",
+        "SSPRK.PhaseTypeData.normalizedGreen_blockU_eq_zero",
+        "SSPRK.PhaseTypeData.normalizedGreen_eta1_nonneg",
+        "SSPRK.PhaseTypeData.normalizedGreen_eta2_nonneg",
+        "SSPRK.PhaseTypeData.normalizedGreen_nonneg",
+        "SSPRK.PhaseTypeData.normalizedGreen_z1",
+        "SSPRK.PhaseTypeData.normalizedGreen_z2",
+        "SSPRK.PhaseTypeData.normalizedGreen_z3",
+        "SSPRK.PhaseTypeData.normalizedGreen_zero_zero",
+        "SSPRK.phaseBlockZ2._proof_1",
+        "SSPRK.phaseBlockZ3._proof_1"
+      ]
+    },
+    "SSPRK.PhaseTypeData.normalized_independent_replacement": {
+      "kind": "theorem",
+      "lines": [
+        19,
+        59
+      ],
+      "module": "SSPRK.PhaseTypeAuxiliary",
+      "name": "SSPRK.PhaseTypeData.normalized_independent_replacement",
+      "typeDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.independentSumLaw",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.normalizedStart",
+        "SSPRK.PhaseTypeData.normalizedTail"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.auxiliary_moment_class",
+        "SSPRK.exists_auxiliary_probability",
+        "SSPRK.independentSumLaw",
+        "SSPRK.independentSumLaw_first_moment",
+        "SSPRK.independentSumLaw_second_moment",
+        "SSPRK.independentSumLaw_third_moment",
+        "SSPRK.phaseBlockEta1",
+        "SSPRK.phaseBlockEta2",
+        "SSPRK.phaseBlockMoment",
+        "SSPRK.phaseBlockZ1",
+        "SSPRK.phaseBlockZ2",
+        "SSPRK.phaseBlockZ3",
+        "SSPRK.phaseBlock_first_moment",
+        "SSPRK.phaseBlock_second_moment",
+        "SSPRK.phaseBlock_third_moment",
+        "SSPRK.PhaseTypeData.instIsProbabilityMeasureRealMeasure",
+        "SSPRK.PhaseTypeData.integrable_id_measure",
+        "SSPRK.PhaseTypeData.integrable_pow_measure",
+        "SSPRK.PhaseTypeData.integrable_sq_measure",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.normalizedGreen",
+        "SSPRK.PhaseTypeData.normalizedGreen_blockH_nonneg",
+        "SSPRK.PhaseTypeData.normalizedGreen_eta1_nonneg",
+        "SSPRK.PhaseTypeData.normalizedGreen_eta2_nonneg",
+        "SSPRK.PhaseTypeData.normalizedGreen_zero_zero",
+        "SSPRK.PhaseTypeData.normalizedStart",
+        "SSPRK.PhaseTypeData.normalizedStart_integral_one",
+        "SSPRK.PhaseTypeData.normalizedStart_integral_three",
+        "SSPRK.PhaseTypeData.normalizedStart_integral_two",
+        "SSPRK.PhaseTypeData.normalizedTail",
+        "SSPRK.PhaseTypeData.normalizedTail_integral_one",
+        "SSPRK.PhaseTypeData.normalizedTail_integral_three",
+        "SSPRK.PhaseTypeData.normalizedTail_integral_two",
+        "SSPRK.PhaseTypeData.normalized_green_eta2_eq_zero"
+      ]
+    },
+    "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail": {
+      "kind": "theorem",
+      "lines": [
+        130,
+        138
+      ],
+      "module": "SSPRK.PhaseTypeThirdMoment",
+      "name": "SSPRK.PhaseTypeData.phaseBlock_momentClass_of_tail",
+      "typeDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.phaseBlockEta1",
+        "SSPRK.phaseBlockEta2",
+        "SSPRK.phaseBlockMoment",
+        "SSPRK.phaseBlockZ1",
+        "SSPRK.phaseBlockZ2",
+        "SSPRK.phaseBlockZ3"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.auxiliary_moment_class",
+        "SSPRK.phaseBlockEta1",
+        "SSPRK.phaseBlockEta2",
+        "SSPRK.phaseBlockMoment",
+        "SSPRK.phaseBlockZ1",
+        "SSPRK.phaseBlockZ2",
+        "SSPRK.phaseBlockZ3",
+        "SSPRK.phaseBlock_first_moment",
+        "SSPRK.phaseBlock_second_moment",
+        "SSPRK.phaseBlock_third_moment",
+        "SSPRK.MomentClass.add"
+      ]
+    },
+    "SSPRK.PhaseTypeData.third_equality_representation": {
+      "kind": "theorem",
+      "lines": [
+        65,
+        77
+      ],
+      "module": "SSPRK.PhaseTypeThirdLaw",
+      "name": "SSPRK.PhaseTypeData.third_equality_representation",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.chainD",
+        "SSPRK.chainL",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.transition",
+        "SSPRK.PhaseTypeData.mass_second_equality_representation._proof_1"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.green_mixture_second_eq_of_third_eq",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.mass_second_equality_representation"
+      ]
+    },
+    "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang": {
+      "kind": "theorem",
+      "lines": [
+        65,
+        84
+      ],
+      "module": "SSPRK.PhaseTypeConditioning",
+      "name": "SSPRK.PhaseTypeData.third_integral_eq_iff_cond_erlang",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.measure"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.cond_positive_eq_normalizeInitial",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.integral_id_measure",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.mass_pos_of_green_mean_pos",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.normalizeInitial",
+        "SSPRK.PhaseTypeData.normalizeInitial_integral_pow",
+        "SSPRK.PhaseTypeData.normalizeInitial_mass",
+        "SSPRK.PhaseTypeData.rate",
+        "SSPRK.PhaseTypeData.rate_pos",
+        "SSPRK.PhaseTypeData.third_integral_eq_iff_atom_add_gamma",
+        "SSPRK.PhaseTypeData.third_integral_eq_normalize_iff"
+      ]
+    },
+    "SSPRK.PhaseTypeData.third_moment_lower_bound": {
+      "kind": "theorem",
+      "lines": [
+        43,
+        48
+      ],
+      "module": "SSPRK.PhaseTypeThirdMomentIntegral",
+      "name": "SSPRK.PhaseTypeData.third_moment_lower_bound",
+      "typeDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.measure"
+      ],
+      "valueDependencies": [
+        "SSPRK.PhaseTypeData",
+        "SSPRK.MomentClass.third_bound",
+        "SSPRK.PhaseTypeData.integral_moment_class",
+        "SSPRK.PhaseTypeData.measure"
+      ]
+    },
+    "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius": {
+      "kind": "theorem",
+      "lines": [
+        179,
+        188
+      ],
+      "module": "SSPRK.Endpoint",
+      "name": "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius",
+      "typeDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.absoluteMonotonicityRadius"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.absoluteMonotonicityRadius",
+        "SSPRK.absoluteMonotonicityRadius_toReal_mem_feasibleRadii"
+      ]
+    },
+    "SSPRK.auxiliary_moment_class": {
+      "kind": "theorem",
+      "lines": [
+        46,
+        51
+      ],
+      "module": "SSPRK.MomentClassOperations",
+      "name": "SSPRK.auxiliary_moment_class",
+      "typeDependencies": [
+        "SSPRK.MomentClass"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass.mk"
+      ]
+    },
+    "SSPRK.eq_midpoint_of_sorted_transform": {
+      "kind": "theorem",
+      "lines": [
+        17,
+        67
+      ],
+      "module": "SSPRK.Proofs.SecondOrderClassification",
+      "name": "SSPRK.eq_midpoint_of_sorted_transform",
+      "typeDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.chainL",
+        "SSPRK.midpointA",
+        "SSPRK.midpointB",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega",
+        "SSPRK.eq_midpoint_of_sorted_transform._proof_1"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.chainL",
+        "SSPRK.midpointA",
+        "SSPRK.midpointB",
+        "SSPRK.midpoint_shifted_matrix",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_vecMul_rkN",
+        "SSPRK.AbsolutelyMonotoneAt.det_ne_zero",
+        "SSPRK.eq_midpoint_of_sorted_transform._proof_1",
+        "SSPRK.eq_midpoint_of_sorted_transform._proof_1_2",
+        "SSPRK.eq_midpoint_of_sorted_transform._simp_1_1"
+      ]
+    },
+    "SSPRK.eq_sdirk_of_sorted_transform": {
+      "kind": "theorem",
+      "lines": [
+        34,
+        91
+      ],
+      "module": "SSPRK.Proofs.ThirdOrderClassification",
+      "name": "SSPRK.eq_sdirk_of_sorted_transform",
+      "typeDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.chainL",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega",
+        "SSPRK.sdirkA",
+        "SSPRK.sdirkB",
+        "SSPRK.sdirkD",
+        "SSPRK.thirdOrderRadius",
+        "SSPRK.eq_sdirk_of_sorted_transform._proof_1"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.chainL",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_vecMul_rkN",
+        "SSPRK.sdirkA",
+        "SSPRK.sdirkB",
+        "SSPRK.sdirkD",
+        "SSPRK.sdirk_shifted_eq_chainL",
+        "SSPRK.thirdOrderRadius",
+        "SSPRK.thirdOrderRadius_pos",
+        "SSPRK.AbsolutelyMonotoneAt.det_ne_zero",
+        "SSPRK.eq_sdirk_of_sorted_transform._proof_1",
+        "SSPRK.eq_sdirk_of_sorted_transform._proof_1_1",
+        "SSPRK.eq_sdirk_of_sorted_transform._proof_1_2"
+      ]
+    },
+    "SSPRK.exists_variance_potential": {
+      "kind": "theorem",
+      "lines": [
+        26,
+        67
+      ],
+      "module": "SSPRK.VariancePotential",
+      "name": "SSPRK.exists_variance_potential",
+      "typeDependencies": [],
+      "valueDependencies": [
+        "_private.SSPRK.VariancePotential.0.SSPRK.square_add_bound",
+        "SSPRK.exists_variance_potential._simp_1_1"
+      ]
+    },
+    "SSPRK.feasibleRadii_le_second_order": {
+      "kind": "theorem",
+      "lines": [
+        10,
+        19
+      ],
+      "module": "SSPRK.Radius",
+      "name": "SSPRK.feasibleRadii_le_second_order",
+      "typeDependencies": [
+        "SSPRK.feasibleRadii"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.feasibleRadii",
+        "SSPRK.second_order_rk_ssp_bound",
+        "SSPRK.AbsolutelyMonotoneAt.det_ne_zero",
+        "SSPRK.AbsolutelyMonotoneAt.matrix_nonneg",
+        "SSPRK.AbsolutelyMonotoneAt.output_mass",
+        "SSPRK.AbsolutelyMonotoneAt.output_nonneg",
+        "SSPRK.AbsolutelyMonotoneAt.stages"
+      ]
+    },
+    "SSPRK.lengthBias_independentSumLaw": {
+      "kind": "theorem",
+      "lines": [
+        25,
+        74
+      ],
+      "module": "SSPRK.LengthBiasConvolution",
+      "name": "SSPRK.lengthBias_independentSumLaw",
+      "typeDependencies": [
+        "SSPRK.independentSumLaw",
+        "SSPRK.lengthBias"
+      ],
+      "valueDependencies": [
+        "SSPRK.independentSumLaw",
+        "SSPRK.independentSumLaw_eq_map",
+        "SSPRK.independentSumLaw_first_moment",
+        "SSPRK.lengthBias",
+        "SSPRK.withDensity_map_comp",
+        "SSPRK.lengthBias.eq_1"
+      ]
+    },
+    "SSPRK.lengthBias_normalized_variance": {
+      "kind": "theorem",
+      "lines": [
+        105,
+        121
+      ],
+      "module": "SSPRK.LengthBias",
+      "name": "SSPRK.lengthBias_normalized_variance",
+      "typeDependencies": [
+        "SSPRK.lengthBias"
+      ],
+      "valueDependencies": [
+        "SSPRK.lengthBias",
+        "SSPRK.lengthBias_first_moment",
+        "SSPRK.lengthBias_mean_pos",
+        "SSPRK.lengthBias_variance"
+      ]
+    },
+    "SSPRK.lengthBias_probabilityMomentMixture": {
+      "kind": "theorem",
+      "lines": [
+        37,
+        68
+      ],
+      "module": "SSPRK.LengthBiasMixture",
+      "name": "SSPRK.lengthBias_probabilityMomentMixture",
+      "typeDependencies": [
+        "SSPRK.lengthBias",
+        "SSPRK.probabilityMomentMixture"
+      ],
+      "valueDependencies": [
+        "SSPRK.lengthBias",
+        "SSPRK.probabilityMomentMixture",
+        "SSPRK.probabilityMomentMixture_first_moment",
+        "SSPRK.lengthBias.eq_1",
+        "SSPRK.probabilityMomentMixture._proof_1",
+        "SSPRK.probabilityMomentMixture.eq_1"
+      ]
+    },
+    "SSPRK.length_biased_component_bound": {
+      "kind": "theorem",
+      "lines": [
+        64,
+        74
+      ],
+      "module": "SSPRK.MomentAlgebra",
+      "name": "SSPRK.length_biased_component_bound",
+      "typeDependencies": [],
+      "valueDependencies": [
+        "SSPRK.second_moment_add"
+      ]
+    },
+    "SSPRK.phaseBlock_third_moment": {
+      "kind": "theorem",
+      "lines": [
+        107,
+        121
+      ],
+      "module": "SSPRK.PhaseTypeBlockMoments",
+      "name": "SSPRK.phaseBlock_third_moment",
+      "typeDependencies": [
+        "SSPRK.phaseBlockEta1",
+        "SSPRK.phaseBlockEta2",
+        "SSPRK.phaseBlockMoment",
+        "SSPRK.phaseBlockZ1",
+        "SSPRK.phaseBlockZ2",
+        "SSPRK.phaseBlockZ3"
+      ],
+      "valueDependencies": [
+        "SSPRK.phaseBlockEta1",
+        "SSPRK.phaseBlockEta2",
+        "SSPRK.phaseBlockH",
+        "SSPRK.phaseBlockMoment",
+        "SSPRK.phaseBlockU",
+        "SSPRK.phaseBlockV",
+        "SSPRK.phaseBlockW",
+        "SSPRK.phaseBlockZ1",
+        "SSPRK.phaseBlockZ2",
+        "SSPRK.phaseBlockZ3",
+        "SSPRK.phaseBlock_mulVec_tail",
+        "SSPRK.phaseBlock_mulVec_zero",
+        "SSPRK.phaseBlock_schur_return",
+        "SSPRK.phaseBlockU._proof_1",
+        "SSPRK.phaseBlockZ2._proof_1",
+        "SSPRK.phaseBlockZ3._proof_1",
+        "SSPRK.phaseBlock_third_moment._simp_1_2"
+      ]
+    },
+    "SSPRK.phase_mixture_chain_classification": {
+      "kind": "theorem",
+      "lines": [
+        41,
+        94
+      ],
+      "module": "SSPRK.PhaseMixtureChain",
+      "name": "SSPRK.phase_mixture_chain_classification",
+      "typeDependencies": [
+        "SSPRK.Substochastic",
+        "SSPRK.chainD",
+        "SSPRK.chainL"
+      ],
+      "valueDependencies": [
+        "SSPRK.Substochastic",
+        "SSPRK.chainD",
+        "SSPRK.chainL",
+        "SSPRK.exists_variance_potential",
+        "SSPRK.green_chain_mean_levels",
+        "SSPRK.green_mean_pos",
+        "SSPRK.phase_mixture_equality",
+        "SSPRK.phase_variance_chain_classification",
+        "SSPRK.phase_variance_pointwise_of_potential"
+      ]
+    },
+    "SSPRK.phase_mixture_chain_classification_of_pos": {
+      "kind": "theorem",
+      "lines": [
+        96,
+        114
+      ],
+      "module": "SSPRK.PhaseMixtureChain",
+      "name": "SSPRK.phase_mixture_chain_classification_of_pos",
+      "typeDependencies": [
+        "SSPRK.Substochastic",
+        "SSPRK.chainD",
+        "SSPRK.chainL",
+        "SSPRK.phase_mixture_chain_classification_of_pos._proof_1"
+      ],
+      "valueDependencies": [
+        "SSPRK.Substochastic",
+        "SSPRK.chainD",
+        "SSPRK.chainL",
+        "SSPRK.phase_mixture_chain_classification",
+        "SSPRK.phase_mixture_chain_classification_of_pos._proof_1",
+        "SSPRK.phase_mixture_chain_classification_of_pos._proof_1_1"
+      ]
+    },
+    "SSPRK.phase_second_moment_bound": {
+      "kind": "theorem",
+      "lines": [
+        15,
+        30
+      ],
+      "module": "SSPRK.PhaseMomentBound",
+      "name": "SSPRK.phase_second_moment_bound",
+      "typeDependencies": [
+        "SSPRK.Substochastic"
+      ],
+      "valueDependencies": [
+        "SSPRK.Substochastic",
+        "SSPRK.exists_variance_potential",
+        "SSPRK.phase_second_moment_bound_of_potential"
+      ]
+    },
+    "SSPRK.phase_second_moment_bound_of_potential": {
+      "kind": "theorem",
+      "lines": [
+        132,
+        174
+      ],
+      "module": "SSPRK.PhaseVariance",
+      "name": "SSPRK.phase_second_moment_bound_of_potential",
+      "typeDependencies": [
+        "SSPRK.Substochastic"
+      ],
+      "valueDependencies": [
+        "SSPRK.Substochastic",
+        "SSPRK.phase_variance_pointwise_of_potential",
+        "SSPRK.weighted_mean_sq_le_second_moment"
+      ]
+    },
+    "SSPRK.phase_variance_pointwise_of_potential": {
+      "kind": "theorem",
+      "lines": [
+        39,
+        130
+      ],
+      "module": "SSPRK.PhaseVariance",
+      "name": "SSPRK.phase_variance_pointwise_of_potential",
+      "typeDependencies": [
+        "SSPRK.Substochastic"
+      ],
+      "valueDependencies": [
+        "SSPRK.Substochastic",
+        "SSPRK.Substochastic.nonneg",
+        "SSPRK.Substochastic.row_sum_le"
+      ]
+    },
+    "SSPRK.rkN_nonneg": {
+      "kind": "theorem",
+      "lines": [
+        48,
+        53
+      ],
+      "module": "SSPRK.RKSubstochastic",
+      "name": "SSPRK.rkN_nonneg",
+      "typeDependencies": [
+        "SSPRK.MatrixNonneg",
+        "SSPRK.Substochastic",
+        "SSPRK.rkN",
+        "SSPRK.rkP"
+      ],
+      "valueDependencies": [
+        "SSPRK.Substochastic",
+        "SSPRK.one_sub_rkP_det_ne_zero",
+        "SSPRK.rkN",
+        "SSPRK.rkN_eq_inv_one_sub_rkP",
+        "SSPRK.rkP",
+        "SSPRK.Substochastic.inv_nonneg"
+      ]
+    },
+    "SSPRK.rkOmega_N_cu_ones_eq": {
+      "kind": "theorem",
+      "lines": [
+        155,
+        167
+      ],
+      "module": "SSPRK.RKTransform",
+      "name": "SSPRK.rkOmega_N_cu_ones_eq",
+      "typeDependencies": [
+        "SSPRK.ones",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega"
+      ],
+      "valueDependencies": [
+        "SSPRK.ones",
+        "SSPRK.rkN",
+        "SSPRK.rkN_sq_mulVec_ones",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_vecMul_rkN"
+      ]
+    },
+    "SSPRK.rkOmega_N_ones_eq": {
+      "kind": "theorem",
+      "lines": [
+        105,
+        109
+      ],
+      "module": "SSPRK.RKTransform",
+      "name": "SSPRK.rkOmega_N_ones_eq",
+      "typeDependencies": [
+        "SSPRK.ones",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega"
+      ],
+      "valueDependencies": [
+        "SSPRK.ones",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_vecMul_rkN"
+      ]
+    },
+    "SSPRK.rkOmega_N_sq_ones_eq": {
+      "kind": "theorem",
+      "lines": [
+        144,
+        153
+      ],
+      "module": "SSPRK.RKTransform",
+      "name": "SSPRK.rkOmega_N_sq_ones_eq",
+      "typeDependencies": [
+        "SSPRK.ones",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega"
+      ],
+      "valueDependencies": [
+        "SSPRK.ones",
+        "SSPRK.rkN",
+        "SSPRK.rkN_mulVec_ones",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_vecMul_rkN"
+      ]
+    },
+    "SSPRK.rkP_substochastic": {
+      "kind": "theorem",
+      "lines": [
+        18,
+        27
+      ],
+      "module": "SSPRK.RKSubstochastic",
+      "name": "SSPRK.rkP_substochastic",
+      "typeDependencies": [
+        "SSPRK.MatrixNonneg",
+        "SSPRK.Substochastic",
+        "SSPRK.ones",
+        "SSPRK.rkM",
+        "SSPRK.rkN",
+        "SSPRK.rkP"
+      ],
+      "valueDependencies": [
+        "SSPRK.MatrixNonneg",
+        "SSPRK.ones",
+        "SSPRK.rkM",
+        "SSPRK.rkN",
+        "SSPRK.rkP",
+        "SSPRK.rkP_mulVec_ones_le_ones",
+        "SSPRK.rkP_nonneg",
+        "SSPRK.Substochastic.mk"
+      ]
+    },
+    "SSPRK.second_order_classification_at_bound": {
+      "kind": "theorem",
+      "lines": [
+        69,
+        127
+      ],
+      "module": "SSPRK.Proofs.SecondOrderClassification",
+      "name": "SSPRK.second_order_classification_at_bound",
+      "typeDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.midpointA",
+        "SSPRK.midpointB",
+        "SSPRK.ones"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.Substochastic",
+        "SSPRK.chainD",
+        "SSPRK.chainL",
+        "SSPRK.eq_midpoint_of_sorted_transform",
+        "SSPRK.midpointA",
+        "SSPRK.midpointB",
+        "SSPRK.one_sub_rkP_eq_rkM",
+        "SSPRK.ones",
+        "SSPRK.phase_mixture_chain_classification_of_pos",
+        "SSPRK.rkM",
+        "SSPRK.rkM_mul_rkN",
+        "SSPRK.rkN",
+        "SSPRK.rkN_mul_rkM",
+        "SSPRK.rkN_nonneg",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_N_ones_eq",
+        "SSPRK.rkOmega_N_sq_ones_eq",
+        "SSPRK.rkOmega_nonneg",
+        "SSPRK.rkP",
+        "SSPRK.rkP_substochastic",
+        "SSPRK.rkSigma",
+        "SSPRK.rkSigma_le_one",
+        "SSPRK.AbsolutelyMonotoneAt.det_ne_zero",
+        "SSPRK.AbsolutelyMonotoneAt.matrix_nonneg",
+        "SSPRK.AbsolutelyMonotoneAt.output_mass",
+        "SSPRK.AbsolutelyMonotoneAt.output_nonneg",
+        "SSPRK.AbsolutelyMonotoneAt.stages",
+        "SSPRK.phase_mixture_chain_classification_of_pos._proof_1"
+      ]
+    },
+    "SSPRK.second_order_optimal_radius": {
+      "kind": "theorem",
+      "lines": [
+        25,
+        34
+      ],
+      "module": "SSPRK.SecondOrderOptimality",
+      "name": "SSPRK.second_order_optimal_radius",
+      "typeDependencies": [
+        "SSPRK.secondOrderOptimalRadius"
+      ],
+      "valueDependencies": [
+        "SSPRK.absoluteMonotonicityRadius",
+        "SSPRK.midpointA",
+        "SSPRK.midpointB",
+        "SSPRK.midpoint_order_one",
+        "SSPRK.midpoint_order_two",
+        "SSPRK.midpoint_radius",
+        "SSPRK.secondOrderOptimalRadius",
+        "SSPRK.secondOrderTableauRadii",
+        "SSPRK.second_order_radius_bound",
+        "SSPRK.secondOrderTableauRadii._proof_1"
+      ]
+    },
+    "SSPRK.second_order_radius_bound": {
+      "kind": "theorem",
+      "lines": [
+        21,
+        31
+      ],
+      "module": "SSPRK.Radius",
+      "name": "SSPRK.second_order_radius_bound",
+      "typeDependencies": [
+        "SSPRK.absoluteMonotonicityRadius"
+      ],
+      "valueDependencies": [
+        "SSPRK.feasibleRadii",
+        "SSPRK.feasibleRadii_le_second_order"
+      ]
+    },
+    "SSPRK.second_order_rk_ssp_bound": {
+      "kind": "theorem",
+      "lines": [
+        28,
+        84
+      ],
+      "module": "SecondOrderBound",
+      "name": "SSPRK.second_order_rk_ssp_bound",
+      "typeDependencies": [],
+      "valueDependencies": [
+        "SSPRK.MatrixNonneg",
+        "SSPRK.Substochastic",
+        "SSPRK.one_sub_rkP_eq_rkM",
+        "SSPRK.ones",
+        "SSPRK.phase_second_moment_bound",
+        "SSPRK.rkM",
+        "SSPRK.rkM_mul_rkN",
+        "SSPRK.rkN",
+        "SSPRK.rkN_mul_rkM",
+        "SSPRK.rkN_nonneg",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_N_ones_eq",
+        "SSPRK.rkOmega_N_sq_ones_eq",
+        "SSPRK.rkOmega_nonneg",
+        "SSPRK.rkP",
+        "SSPRK.rkP_substochastic",
+        "SSPRK.rkSigma",
+        "SSPRK.rkSigma_le_one",
+        "SSPRK.second_order_bound_of_weighted_moment_inequality"
+      ]
+    },
+    "SSPRK.second_order_unique_at_twice_stages": {
+      "kind": "theorem",
+      "lines": [
+        18,
+        49
+      ],
+      "module": "SecondOrderEquality",
+      "name": "SSPRK.second_order_unique_at_twice_stages",
+      "typeDependencies": [],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.second_order_classification_at_bound",
+        "SSPRK.AbsolutelyMonotoneAt.mk"
+      ]
+    },
+    "SSPRK.second_order_unique_of_radius_eq": {
+      "kind": "theorem",
+      "lines": [
+        15,
+        35
+      ],
+      "module": "SSPRK.SecondOrderRadiusEquality",
+      "name": "SSPRK.second_order_unique_of_radius_eq",
+      "typeDependencies": [
+        "SSPRK.absoluteMonotonicityRadius",
+        "SSPRK.midpointA",
+        "SSPRK.midpointB",
+        "SSPRK.ones"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.absoluteMonotonicityRadius",
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius",
+        "SSPRK.ones",
+        "SSPRK.second_order_classification_at_bound"
+      ]
+    },
+    "SSPRK.third_moment_add": {
+      "kind": "theorem",
+      "lines": [
+        76,
+        89
+      ],
+      "module": "SSPRK.MomentAlgebra",
+      "name": "SSPRK.third_moment_add",
+      "typeDependencies": [
+        "SSPRK.MomentClass"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.length_biased_component_bound",
+        "SSPRK.second_moment_mix",
+        "SSPRK.MomentClass.mean_pos",
+        "SSPRK.MomentClass.parameter_pos",
+        "SSPRK.MomentClass.second_bound",
+        "SSPRK.MomentClass.third_bound"
+      ]
+    },
+    "SSPRK.third_moment_add_eq_conditions": {
+      "kind": "theorem",
+      "lines": [
+        78,
+        105
+      ],
+      "module": "SSPRK.MomentAlgebraEquality",
+      "name": "SSPRK.third_moment_add_eq_conditions",
+      "typeDependencies": [
+        "SSPRK.MomentClass"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.length_biased_component_bound",
+        "SSPRK.length_biased_component_eq_conditions",
+        "SSPRK.second_moment_mix_eq_components",
+        "SSPRK.MomentClass.mean_pos",
+        "SSPRK.MomentClass.parameter_pos",
+        "SSPRK.MomentClass.second_bound",
+        "SSPRK.MomentClass.third_bound"
+      ]
+    },
+    "SSPRK.third_order_classification_at_bound": {
+      "kind": "theorem",
+      "lines": [
+        93,
+        179
+      ],
+      "module": "SSPRK.Proofs.ThirdOrderClassification",
+      "name": "SSPRK.third_order_classification_at_bound",
+      "typeDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.sdirkA",
+        "SSPRK.sdirkB",
+        "SSPRK.thirdOrderRadius"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.chainD",
+        "SSPRK.chainL",
+        "SSPRK.eq_sdirk_of_sorted_transform",
+        "SSPRK.ones",
+        "SSPRK.rkN",
+        "SSPRK.rkOmega",
+        "SSPRK.rkOmega_N_cu_ones_eq",
+        "SSPRK.rkOmega_N_ones_eq",
+        "SSPRK.rkOmega_N_sq_ones_eq",
+        "SSPRK.rkP",
+        "SSPRK.sdirkA",
+        "SSPRK.sdirkB",
+        "SSPRK.sdirkD",
+        "SSPRK.thirdOrderRadius",
+        "SSPRK.thirdOrderRadius_add_two_div_succ_eq_sdirkD",
+        "SSPRK.thirdOrderRadius_pos",
+        "SSPRK.thirdOrderRadius_quadratic_eq_zero",
+        "SSPRK.AbsolutelyMonotoneAt.det_ne_zero",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType_green",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.initial",
+        "SSPRK.PhaseTypeData.mass",
+        "SSPRK.PhaseTypeData.mk",
+        "SSPRK.PhaseTypeData.third_equality_representation",
+        "SSPRK.PhaseTypeData.third_equality_second_moment",
+        "SSPRK.PhaseTypeData.transition",
+        "SSPRK.eq_sdirk_of_sorted_transform._proof_1",
+        "SSPRK.third_order_classification_at_bound._proof_1_1",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_1",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_2",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_3",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_4",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType._proof_5",
+        "SSPRK.PhaseTypeData.mass_second_equality_representation._proof_1"
+      ]
+    },
+    "SSPRK.third_order_optimal_radius": {
+      "kind": "theorem",
+      "lines": [
+        37,
+        47
+      ],
+      "module": "SSPRK.ThirdOrderOptimality",
+      "name": "SSPRK.third_order_optimal_radius",
+      "typeDependencies": [
+        "SSPRK.thirdOrderOptimalRadius",
+        "SSPRK.thirdOrderRadius"
+      ],
+      "valueDependencies": [
+        "SSPRK.absoluteMonotonicityRadius",
+        "SSPRK.ones",
+        "SSPRK.sdirkA",
+        "SSPRK.sdirkB",
+        "SSPRK.sdirk_order_one",
+        "SSPRK.sdirk_order_three_node",
+        "SSPRK.sdirk_order_three_tree",
+        "SSPRK.sdirk_order_two",
+        "SSPRK.sdirk_radius",
+        "SSPRK.thirdOrderOptimalRadius",
+        "SSPRK.thirdOrderRadius",
+        "SSPRK.thirdOrderTableauRadii",
+        "SSPRK.third_order_radius_bound",
+        "SSPRK.thirdOrderTableauRadii._proof_1",
+        "SSPRK.thirdOrderTableauRadii._proof_2",
+        "SSPRK.thirdOrderTableauRadii._proof_3",
+        "SSPRK.third_order_optimal_radius._proof_1_1"
+      ]
+    },
+    "SSPRK.third_order_radius_bound": {
+      "kind": "theorem",
+      "lines": [
+        7,
+        24
+      ],
+      "module": "SSPRK.ThirdOrderRadius",
+      "name": "SSPRK.third_order_radius_bound",
+      "typeDependencies": [
+        "SSPRK.absoluteMonotonicityRadius"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.feasibleRadii",
+        "SSPRK.third_order_rk_ssp_bound",
+        "SSPRK.AbsolutelyMonotoneAt.det_ne_zero",
+        "SSPRK.AbsolutelyMonotoneAt.matrix_nonneg",
+        "SSPRK.AbsolutelyMonotoneAt.output_mass",
+        "SSPRK.AbsolutelyMonotoneAt.output_nonneg",
+        "SSPRK.AbsolutelyMonotoneAt.stages"
+      ]
+    },
+    "SSPRK.third_order_rk_ssp_bound": {
+      "kind": "theorem",
+      "lines": [
+        37,
+        82
+      ],
+      "module": "ThirdOrderBound",
+      "name": "SSPRK.third_order_rk_ssp_bound",
+      "typeDependencies": [],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.third_order_bound_of_quadratic",
+        "SSPRK.third_order_quadratic_of_moment_bound",
+        "SSPRK.AbsolutelyMonotoneAt.mk",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_cube",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_id",
+        "SSPRK.AbsolutelyMonotoneAt.phaseType_integral_sq",
+        "SSPRK.PhaseTypeData.measure",
+        "SSPRK.PhaseTypeData.third_moment_lower_bound",
+        "SSPRK.third_order_rk_ssp_bound._proof_1_1"
+      ]
+    },
+    "SSPRK.third_order_unique_at_radius": {
+      "kind": "theorem",
+      "lines": [
+        19,
+        55
+      ],
+      "module": "ThirdOrderEquality",
+      "name": "SSPRK.third_order_unique_at_radius",
+      "typeDependencies": [],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.third_order_classification_at_bound",
+        "SSPRK.AbsolutelyMonotoneAt.mk"
+      ]
+    },
+    "SSPRK.third_order_unique_of_radius_eq": {
+      "kind": "theorem",
+      "lines": [
+        15,
+        34
+      ],
+      "module": "SSPRK.ThirdOrderRadiusEquality",
+      "name": "SSPRK.third_order_unique_of_radius_eq",
+      "typeDependencies": [
+        "SSPRK.absoluteMonotonicityRadius",
+        "SSPRK.sdirkA",
+        "SSPRK.sdirkB",
+        "SSPRK.thirdOrderRadius"
+      ],
+      "valueDependencies": [
+        "SSPRK.AbsolutelyMonotoneAt",
+        "SSPRK.absoluteMonotonicityRadius",
+        "SSPRK.absolutelyMonotoneAt_absoluteMonotonicityRadius",
+        "SSPRK.thirdOrderRadius",
+        "SSPRK.thirdOrderRadius_pos",
+        "SSPRK.third_order_classification_at_bound"
+      ]
+    },
+    "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class": {
+      "kind": "theorem",
+      "lines": [
+        95,
+        102
+      ],
+      "module": "SSPRK.PhaseTypeThirdMixtureEquality",
+      "name": "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.green_row_moment_class",
+      "typeDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green"
+      ],
+      "valueDependencies": [
+        "SSPRK.MomentClass",
+        "SSPRK.PhaseTypeData",
+        "SSPRK.PhaseTypeData.green",
+        "SSPRK.PhaseTypeData.green_moment_class",
+        "SSPRK.PhaseTypeData.green_rowSum_pos",
+        "SSPRK.PhaseTypeData.initial",
+        "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.pointInitial",
+        "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.pointInitial_dotProduct",
+        "_private.SSPRK.PhaseTypeThirdMixtureEquality.0.SSPRK.PhaseTypeData.pointInitial_green"
+      ]
+    }
+  },
+  "sourceSha256LfNormalized": {
+    "lean/SSPRK/AuxiliaryLaw.lean": "a55c81062b8ad65a2b662d01a19f069a0e5cb8728a74973228a2531ade356a25",
+    "lean/SSPRK/AuxiliaryScale.lean": "12a27cf77acb82916f063bb785ccd5170f6057703f5fbaf3b17643ce81778147",
+    "lean/SSPRK/CTMC/CanonicalLaw.lean": "02faf54ff146e08afd890b985556bc3d23606179ddb7e6cb5b0ac06ac3130459",
+    "lean/SSPRK/CTMC/Core.lean": "1f23de613e438fe766162bcce45d5b6667b025c5b5b213e1dbb0f4cb01d0d64d",
+    "lean/SSPRK/CTMC/DTMC.lean": "25de24da9e45e1b67cd081f46763e0767feef83d5c886235af09a468e899d7cd",
+    "lean/SSPRK/CanonicalStateMarginals.lean": "a61f36bdd925775e1a1cea14f2a658d709702a9aa63da9eb461e366817f47981",
+    "lean/SSPRK/ChainMatrices.lean": "88ef4e986053622f9c47827e50502775205318d928c21849aeb05cec38d5c199",
+    "lean/SSPRK/DownwardClosure.lean": "b92c39597c1d0d8935b48dab84bbf7823214320da8a725a522f954d8b3379050",
+    "lean/SSPRK/Endpoint.lean": "f289baeceda55038f76e646eb98d2c923767b3038f9b6b6b449e5953849e629d",
+    "lean/SSPRK/ErlangConvolution.lean": "ba3e7a6fcdfdd6c465fac6feda79fd0d41803f6fa3c881109cdb332f255b8006",
+    "lean/SSPRK/ErlangLaplace.lean": "0e93334a94b44eebc6aecfa65cd2e26eff4ab8179844f2facff31f934555ec4e",
+    "lean/SSPRK/ErlangMoments.lean": "a76a8d00f804890bf359a4635ce8ab6a1917804fd2cbf4a689c888600f5ea1a2",
+    "lean/SSPRK/ErlangPhaseType.lean": "78ff98729749d173092498c695d9022f2437ee324869024a250918e1cadcf5f1",
+    "lean/SSPRK/ErlangUniformizedWeights.lean": "883a0436f5fa7b0bacc7443e50e7e7bce19a67e50738eb4866a63f6d2dc1dcf2",
+    "lean/SSPRK/ErlangVariance.lean": "ee39a8a618a79e2f9b0ca131b063cac160ca8af2a795fbecc21515c150bc8511",
+    "lean/SSPRK/Feasibility.lean": "831ebae85eab7aecf2c1d6f5457d411161ca56436a7d622d6efc8b75ff49b3c1",
+    "lean/SSPRK/FeasibilityAtZero.lean": "0f2064ca6eec5c1014ae54b65f5fb923e05a93dd1c996f3b182f9b2cebf8bdcf",
+    "lean/SSPRK/GreenReachability.lean": "0c178799ce7a941314046bd51b73cd26cc49efc86070fb60ffec9e4ad6c04706",
+    "lean/SSPRK/LaplaceUniqueness.lean": "d40f90dd49400d257b592c84d7540a3b00d8e161eea304ac8c79ae9a6aa9146e",
+    "lean/SSPRK/LengthBias.lean": "21bbee028d95e504d4a81263ebee838f224f01c8da0b5ff8711689b8573b6a40",
+    "lean/SSPRK/LengthBiasConvolution.lean": "7951b30cf9f07d47fbd38dd3abc5be2fd3607c59acf7de6749f1f5586971bf0c",
+    "lean/SSPRK/LengthBiasMixture.lean": "352f192e15efda97afe6a38c1f26a2921c1245b6349b7a7d7f1fab567074a244",
+    "lean/SSPRK/MidpointAttainment.lean": "31ad9552e37e473df10f46992f5604121add4776ff3b6b919737c352e9a217a5",
+    "lean/SSPRK/MidpointOrder.lean": "8f1498309b3a258b19d006e40051e81ae62a406e702e79b7c01936a20ebc5d49",
+    "lean/SSPRK/MomentAlgebra.lean": "aa6b528ba975666e8883b34b1d4ed9a14e284587c79f970516fbade8a2ffe55a",
+    "lean/SSPRK/MomentAlgebraEquality.lean": "a4b0d8352c15d47dbae87851f4e3c8395ef62e789fc62d2e56013ab80731abd5",
+    "lean/SSPRK/MomentClassOperations.lean": "71b14fea519781fbaa7419c228ee1d5423f1afaf182bff35cd09c927497c99ba",
+    "lean/SSPRK/MomentConvolution.lean": "151591345d854faa7431c37982da3ef27870d730ecff94b0e248c23372b0e170",
+    "lean/SSPRK/MomentCountableMixture.lean": "d73664105d28dcbda057a6f9c51feb45a2273a442a34ba7b712119dbfc9268c3",
+    "lean/SSPRK/MomentMixture.lean": "9520f0bae8351b1c91e912dcadcf5324fd8423be4dc7c30c4d5fc9d02b40af2f",
+    "lean/SSPRK/NilpotentLongPath.lean": "e763422d5f0e45942ccea6282d261e6032cd5d9ac0570f6202f4c93e6c14b1ac",
+    "lean/SSPRK/NilpotentPaths.lean": "0aff32896f3ffe05b3cc32273b22cc957b1e02aa4659813f6ef47af5c9eae7a6",
+    "lean/SSPRK/OrderedPhaseChain.lean": "d825e5ffb4ef63f63146078b1d5798b07a0a687edc0268e6ad630091a7c22f22",
+    "lean/SSPRK/PhaseChainEquality.lean": "c1e26ad9c32135fcae72e2166c71d6ba15550b1152a9b6baad74d8cf903f129c",
+    "lean/SSPRK/PhaseChainRow.lean": "ea84813baf88780cb09a264e2018b03730998af297cebab3e4c6e07c1aa4d528",
+    "lean/SSPRK/PhaseMixtureChain.lean": "eadd44a9f8c162998e948c13a577d67adfbaf477b72c65f0742bdee1fa4c8673",
+    "lean/SSPRK/PhaseMixtureEquality.lean": "733bbff106869376f2e82cc1dfc94848c779b324ccdf6e78473521244fc65d10",
+    "lean/SSPRK/PhaseMomentBound.lean": "12da3f9a675fa8c850db2579dcacb72a820bb0b2ed0aaba0e67fb5dfc0f03a4c",
+    "lean/SSPRK/PhaseType.lean": "1ca028413f27e5dfc52f1811010dbe87d93f7cb03f654a863dd3acc4f47b6d45",
+    "lean/SSPRK/PhaseTypeAbsorptionLaw.lean": "0ed7ccce3bf35fd77be6b6d47485257742b9c352d1b5514ed3a971dfaad3a9e6",
+    "lean/SSPRK/PhaseTypeAbsorptionLimit.lean": "9a08d8480ab3a54bced31d88213fbf80523c198ece6a1ed6952c6beb46a99918",
+    "lean/SSPRK/PhaseTypeAbsorptionProper.lean": "1f231f50fffb88733f3826029276c11417f701b564029f3dd0964f8d10a593b7",
+    "lean/SSPRK/PhaseTypeAllMoments.lean": "d6a1effc56b4dd513ed27858a219d3a5093552e1c6f8f6ecc6113aa89a59b4a2",
+    "lean/SSPRK/PhaseTypeAuxiliary.lean": "ab40d8330283ca1561ed5725528a574d62f59d4d196394898bae7034e349f621",
+    "lean/SSPRK/PhaseTypeBlockMoments.lean": "216c93e8a1a123e4c3c808d025932bc8d179892b9e07c8b593d4337536b21de6",
+    "lean/SSPRK/PhaseTypeCanonicalRecords.lean": "66fbdc2bf0606843a93b7a8ff40d27a4de24b0f4807dca60baacc260a15230ab",
+    "lean/SSPRK/PhaseTypeConditioning.lean": "283e5a4e8179a28301fe697f3172e396f179690248884ab14525d2740301f148",
+    "lean/SSPRK/PhaseTypeCountMoments.lean": "94441e74de8b6d09ca918b922277350ff1ec054081c8fc537214c8120e212eff",
+    "lean/SSPRK/PhaseTypeData.lean": "828f4bc5957473538fde367c8aa5c57f12d5b147bff90f2d8f96ac3396783170",
+    "lean/SSPRK/PhaseTypeDensity.lean": "8712772e7d016a2806cc554abf830555c11890e22ab8083b7534abaaa5a29bf3",
+    "lean/SSPRK/PhaseTypeDimensionBounds.lean": "77d44291e5a3bb464343481b3d6b02b9ac4347fb4c274e825ba87c543b0fae76",
+    "lean/SSPRK/PhaseTypeElimination.lean": "c37cd22e2b5b734e2bce057104c461d1e65c601bc985ba3198a405dd8adfcda0",
+    "lean/SSPRK/PhaseTypeEliminationHarmonic.lean": "253d26d23424e501f5de8eced033a9f176a74a29fb0e0c8c6e57b516adefe586",
+    "lean/SSPRK/PhaseTypeEmbeddedChain.lean": "804454e114e71fad052dbda1ac5c4fe6587fde9160ac99c087e52db93d1315d9",
+    "lean/SSPRK/PhaseTypeEquality.lean": "b0c6b83424e5e3be698270f86a03be55d1a95b8cb4fa420f40ba4767313bd843",
+    "lean/SSPRK/PhaseTypeErlangCharpoly.lean": "e6a99dd6fde169def8799826a1a9ec2f1328fe960734682a65110a5fd9f0b704",
+    "lean/SSPRK/PhaseTypeErlangNilpotent.lean": "6c64cd389a08afb9fe8aadec0802266f068d8e67bde1c84a2f6f9f9cf4e2d94a",
+    "lean/SSPRK/PhaseTypeErlangRigidity.lean": "e7de121e108164dafbafd0ae580368555b2047a0d4d91e0ae5888850e3caaea2",
+    "lean/SSPRK/PhaseTypeGeneratingFunction.lean": "c7dc3a99f7d03eb05b1c7c40cb33ca60cf75a55f44311d5d4c551e5031614251",
+    "lean/SSPRK/PhaseTypeGenerator.lean": "710ecc09a21d0b8ce8148a367d23f6fd4e7feff69c4fed0fb8d4a064333cfa91",
+    "lean/SSPRK/PhaseTypeGeneratorMoments.lean": "2fee5a1ede33087c95f837d8771d7fc73370f84510a47652afd0eee3d2e08765",
+    "lean/SSPRK/PhaseTypeHigherCountMoments.lean": "20088d5ad74b1a80ce0d60171223792e32467bba16ecb9f02fa284bea0c26052",
+    "lean/SSPRK/PhaseTypeHoldingLaplace.lean": "6032c72afc991b88983efc58819e27fea0ef43d0a7790ec56ff2b8506cbe0889",
+    "lean/SSPRK/PhaseTypeLaplace.lean": "19a40b12f246dbc9f0778e47b2a3fb12e8fe0f6f1af7e16f8ec5c3f0702148d5",
+    "lean/SSPRK/PhaseTypeLaplaceGenerator.lean": "3dddd50d8a0e881c4417d360b0183bfbe58f8a2b50672467fdf249f4912afd6c",
+    "lean/SSPRK/PhaseTypeLaplaceHarmonic.lean": "ca590f35ef82b31cf97d34c57f3b1085710241a4f3f6dda8389103dac75215cc",
+    "lean/SSPRK/PhaseTypeLaw.lean": "7c8c67dd320439e9b62b22cb7aef75ecd4a75f36dcda13778c3989654daf35f4",
+    "lean/SSPRK/PhaseTypeLawEquality.lean": "eb701bcdd720a6f06e1aeb433258cff1d438282253598a17e7683f34ea37a721",
+    "lean/SSPRK/PhaseTypeMoments.lean": "2cf2511a83b187b96ef10c0454a6cd59c2aff14998fbc5a8bdc9185446245532",
+    "lean/SSPRK/PhaseTypeNormalization.lean": "5d5f2a6bded26e94811caff2739f9d77573cda22c8d0207cdb19eb36ab8b6410",
+    "lean/SSPRK/PhaseTypeOccupationLaw.lean": "abc756af08c20581a004d366a86262245e560a6b44b17e10ea42bc7e03fc2c7c",
+    "lean/SSPRK/PhaseTypePath.lean": "6f69709c32a438a731ffbfaec8219a6491acbfa4d3a74bd2db0d04a51d8b6b40",
+    "lean/SSPRK/PhaseTypePathOccupation.lean": "b27d283e328c9494ab457b80a653038ca24ab22e07421075f9f73b2d086db57a",
+    "lean/SSPRK/PhaseTypePrincipal.lean": "d2a4bc9b19fb49fead058ad3f779823e2c7a295b9b104f2176e4c50ca9cefd27",
+    "lean/SSPRK/PhaseTypeQMatrix.lean": "db3e3a9d0862e051ef18d869ac5ec2f73baef27fec6101417d1345f6cf074fd1",
+    "lean/SSPRK/PhaseTypeRecordClock.lean": "975797cff9f62a01db07b576d72267079b57efb9e7eebe020228016cdab1baa4",
+    "lean/SSPRK/PhaseTypeRecordHarmonic.lean": "f44f9523bd27b9e6a127370b64ee22fe593f9ad68ad46522a40e006b48d621b2",
+    "lean/SSPRK/PhaseTypeRecordOccupation.lean": "573cff87d07fab19bb98af13a360a61ddb83e06bde7cf5c683dd06f91baaa930",
+    "lean/SSPRK/PhaseTypeRecordRewardHarmonic.lean": "42b907affef86675eb607444e4383b638eb7a6ede668d5a7a0e03719f709daf6",
+    "lean/SSPRK/PhaseTypeReindex.lean": "06c03462faa7f7e18a9666a3c6909b1cbf1507393d70169c463cdfbe1b10a5dd",
+    "lean/SSPRK/PhaseTypeResolvent.lean": "d1a239921d3d340d7ed105d1662369a43835ca1e84cf83981f67ec1ec896dad9",
+    "lean/SSPRK/PhaseTypeReturn.lean": "6366e8c3e9575a57d473597241b9a3876df5ccbc569869425a9f6355fc170f83",
+    "lean/SSPRK/PhaseTypeRewardLimit.lean": "465c90dfd6a7f6dc5c0da4d69359c343469abbf08c307a662f031172f870b8af",
+    "lean/SSPRK/PhaseTypeSurvival.lean": "f7162e8ddae495d8d68569aa7e299f5999890b6ad0b813111db7c15dc2525d27",
+    "lean/SSPRK/PhaseTypeThirdEquality.lean": "3793584605a1578de78583d5d99c406941c2399ecf34990dca529f4284c525fd",
+    "lean/SSPRK/PhaseTypeThirdLaw.lean": "42fff49424189a68250e0f371d3a02ce209958ff9185625ed8cdfa8c61d9370f",
+    "lean/SSPRK/PhaseTypeThirdMixtureEquality.lean": "f2a5d8da9f77436caaec4daaf726a574ba7f0fb3f78964faebaa2bab7f99e02c",
+    "lean/SSPRK/PhaseTypeThirdMoment.lean": "32b5bd46966f9ad2b83fb1a45471f212729b48618b39aeb3fb8783b08749d98f",
+    "lean/SSPRK/PhaseTypeThirdMomentIntegral.lean": "226301af63c685dc428d4474f8157bd6d2fa3c82074ec2579da5b14db30cc172",
+    "lean/SSPRK/PhaseTypeTimeChange.lean": "26eb22b5b8101e647ea7c4592296ce1dca6bcf0ff1552412946f0f491952b947",
+    "lean/SSPRK/PhaseTypeUniformization.lean": "a5b0efea5bb1e5c1c4c3bc2d31fd3170b0fd2007e7ecb1c5713b689320c9e094",
+    "lean/SSPRK/PhaseTypeUniformizedDTMC.lean": "c523ad29c5c8c5dea74fdb1df185cbbf0d936728042745a9564001fc17fd4287",
+    "lean/SSPRK/PhaseTypeVariance.lean": "5d6666c0dcae69de96b8758cf010e94bdfcfc9a6ddbc89cf78e180cdf8b56e02",
+    "lean/SSPRK/PhaseTypeWeights.lean": "ce5083e92bb48f9418d3fea87d3300d06df9be5dc1afdcb4b8b5669bd51e7082",
+    "lean/SSPRK/PhaseVariance.lean": "064864dbb04d591e02d39a81913712c881def1156969214716350c2bf6d17877",
+    "lean/SSPRK/PhaseVarianceEquality.lean": "4d5506b3012b0f827d5b365da734ddd68403a65eb571347f5d9ec48767096cf0",
+    "lean/SSPRK/ProbabilityMomentMixture.lean": "c9aa8f58ffa44a338ccc4c815cf543cefd108bdc2bef4893e531b29d3cc0d96b",
+    "lean/SSPRK/Proofs/SecondOrderClassification.lean": "ccffa37db4fa4cb25c821768c53e141e49d26d9feb38f1519b6b2f4dbe8b78e5",
+    "lean/SSPRK/Proofs/ThirdOrderClassification.lean": "bd06359e7a643a2be97639f7514b486474544084504bf4be8d47f79b760fdc68",
+    "lean/SSPRK/RKPhaseType.lean": "884831885d9277a886ec789c3ca735827aefe5e6fec258213c5f2d6207176638",
+    "lean/SSPRK/RKSubstochastic.lean": "0f62fb9b8f8ad43f1848054fd551e1dde2d184aefeef08b05b3921d2a5aa2a70",
+    "lean/SSPRK/RKThirdMoment.lean": "4ee8a498432ffe4cc5c30b00c3206ceb50ac637f2d87b6f82ba3fd44b896f784",
+    "lean/SSPRK/RKTransform.lean": "578b3e7ad657afe2097a9bee15b3504a4416ede9b5f16b1eb8c8d8b1d7f040ee",
+    "lean/SSPRK/Radius.lean": "8952f243b453b7cadb2a2909d4ea145944f9e24998175575a73fee782af5fb10",
+    "lean/SSPRK/SDIRKAttainment.lean": "a76a7e2ab48b7f9f6d3143d67a6aa343af2f2846218262452ce43400672d5250",
+    "lean/SSPRK/SDIRKOrder.lean": "69b14b4d2283a707fe93d7dfec1541d9cd53c0fe5dfde0ba9440083c1bea5b9a",
+    "lean/SSPRK/SSPRadius.lean": "3835c2b11a4b4ac92f0babff02a786910a13b7727e2156d572d03ecbbacf0878",
+    "lean/SSPRK/ScaledExponential.lean": "cc8d0f7c2a3e244bac070e346eb26b99cd6a4b94080ac11fdf2e41a20a1505b7",
+    "lean/SSPRK/ScaledResolvent.lean": "11c2f3fc48e904f299118725f036e4e5ed4bc84964fb98473eea09ebf7ac94bb",
+    "lean/SSPRK/SecondOrderInitialWeights.lean": "7d5544e495936e2fd074d4ab721b4021c94a9983d3e9ea52639774c937818c1e",
+    "lean/SSPRK/SecondOrderOptimality.lean": "e25db7e0135e79a2a3ddb6d67bb3b8463f4078637abeab0a2029f1942940d5e4",
+    "lean/SSPRK/SecondOrderRadiusEquality.lean": "e8f95dda1f2891fc329afc9be2d755c3c9935f143d0773d6225f9b7a499a10c9",
+    "lean/SSPRK/Substochastic.lean": "ca15c0285605ec219f66f23ded52201ea399bd35e9efe85ff2326a124a627555",
+    "lean/SSPRK/ThirdOrderOptimality.lean": "8100444e69774c406dbf06203eae4353c1c7ec9742fc53fdcd25ba4d7a143698",
+    "lean/SSPRK/ThirdOrderRadius.lean": "acd3a0857907f536c5b371d03107261a7e29791d4e686e565b5c5d1915596946",
+    "lean/SSPRK/ThirdOrderRadiusEquality.lean": "f0f55ba57cb22cad01ead2952c8ea9b0656b874138bd034729766763a7c31da6",
+    "lean/SSPRK/VariancePotential.lean": "da4a8c4bcdfbe9f536508307383df29b6b6c8cbc7443758251492bf2e4ae2197",
+    "lean/SSPRK/VariancePotentialEquality.lean": "812df008ed2f392a8c394283854f5e2011677a35b6bfaf107cffb6ef87dfbe99",
+    "lean/SSPRK/VariancePotentialLevels.lean": "df7fa074e94da4bbb6c803b47fc4d677486440a97cdcc9a559c18de5499ccbb4",
+    "lean/SecondOrderBound.lean": "67029bda6cb14847c73fb612fbe5e8e98162ad62a78f7a0787e0497a3ea52db8",
+    "lean/SecondOrderEquality.lean": "229803e8345418957649bbb381181a8610df407a3b7a7e00bd18d9369ef42557",
+    "lean/ThirdOrderBound.lean": "f00c253f4bf58566d8198c77dcf5127879921a6a47ce075ba5b8695ec12dc154",
+    "lean/ThirdOrderEquality.lean": "bcbf05dc1d1e83ad370f3b8eab4207866be36d9ea9bbc6875f81ff8e9919f1ea"
+  }
+}

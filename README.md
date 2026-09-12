@@ -2,12 +2,25 @@
 
 Lean formalization of SSP-RK theory
 
-This project is used for the Lean formal verification of the SSP-RK theory. Based on the main proof line of the paper V1.6, the repository mainly maintains Lean code.
+This project formalizes the sharp second- and third-order SSP-RK bounds and optimizer
+classifications of V1.6 in Lean. The [proof correspondence review](ProofCorrespondence.md)
+checks the statements and actual proof dependencies, and explains the substantive
+substitutions in the formal proofs. Its [review record](docs/proof-correspondence-review.md)
+records completed checks and provides a worksheet for external reviewers.
+
+The four public entries state the order conditions and all four SSP inequalities explicitly:
+
+| Conclusion | Entry file |
+| --- | --- |
+| Second-order upper bound | [SecondOrderBound.lean](lean/SecondOrderBound.lean) |
+| Third-order upper bound | [ThirdOrderBound.lean](lean/ThirdOrderBound.lean) |
+| Second-order equality classification | [SecondOrderEquality.lean](lean/SecondOrderEquality.lean) |
+| Third-order equality classification | [ThirdOrderEquality.lean](lean/ThirdOrderEquality.lean) |
 
 ## Second- and third-order optimality
 
 The general second-order bound `r ≤ 2 * s` is proved in
-`SSPRK.second_order_rk_ssp_bound` in [SecondOrder.lean](lean/SSPRK/SecondOrder.lean).
+`SSPRK.second_order_rk_ssp_bound` in [SecondOrderBound.lean](lean/SecondOrderBound.lean).
 Its original statement is unchanged: arbitrary real dense tableaux are allowed, with no
 triangularity or acyclicity assumption. The complete supremum radius is also bounded by
 `2 * s` in `SSPRK.second_order_radius_bound`. The repeated midpoint family attains
@@ -66,7 +79,8 @@ lemmas used from Ripple are extracted into `lean/SSPRK/CTMC/`; see the
 ## Project structure
 
 - `docs/V1.6.pdf`: reference manuscript.
-- `lean/SSPRK/SecondOrder.lean`: the general second-order SSP upper bound.
+- `lean/SecondOrderBound.lean`, `ThirdOrderBound.lean`, `SecondOrderEquality.lean`,
+  `ThirdOrderEquality.lean`: the four explicit public entries listed above.
 - `lean/SSPRK/Radius.lean`: the feasible set, extended radius, and its upper bound.
 - `lean/SSPRK/Substochastic.lean`: the convergent Neumann series and inverse nonnegativity.
 - `lean/SSPRK/RKTransform.lean`, `RKSubstochastic.lean`: the RK transform and matrix moments.
@@ -107,5 +121,7 @@ lemmas used from Ripple are extracted into `lean/SSPRK/CTMC/`; see the
 - `lean/SSPRK/PhaseTypeDensity.lean`: the matrix-exponential PH density formula.
 - `lean/SSPRK/CTMC/`: the local finite CTMC core and canonical record measure.
 - `lean/scripts/AuditCTMC.lean`: the elaborated constant-dependency and axiom audit.
+- `lean/scripts/AuditCorrespondence.lean`, `summarize_correspondence.py`: the actual
+  proof-dependency evidence used by `ProofCorrespondence.md`.
 - `lean/Main.lean`: imports the modules checked by the default build.
 - `lean/lean-toolchain` and `lean/lake-manifest.json`: pinned environment.
