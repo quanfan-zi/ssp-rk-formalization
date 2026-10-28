@@ -1,4 +1,4 @@
-import SSPRK.PhaseTypeThirdLaw
+import SSPRK.PhaseTypeThirdDefectEquality
 import SSPRK.RKThirdMoment
 import SSPRK.SDIRKAttainment
 
@@ -147,8 +147,8 @@ theorem third_order_classification_at_bound {s : ℕ} (hs : 2 ≤ s)
     rw [hraw1]
     exact hrpos
   obtain ⟨a, ha, e, _, hgreen, hinitial, hfirst⟩ :=
-    d.third_equality_representation (by omega) hmean heq
-  have hsecond := d.third_equality_second_moment (by omega) hmean heq a hfirst
+    d.third_equality_representation_defect (by omega) hmean heq
+  have hsecond := d.third_equality_second_moment_defect (by omega) hmean heq a hfirst
   have hcombined : r ^ 2 + 2 * r = r * a * ((s : ℝ) + 1) := by
     rw [← hraw2, hsecond]
     calc

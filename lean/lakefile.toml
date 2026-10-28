@@ -14,13 +14,25 @@ name = "Main"
 name = "SSPRK"
 
 [[lean_lib]]
-name = "SecondOrderBound"
+name = "Proposition_2_3_TransientSubintensity"
 
 [[lean_lib]]
-name = "ThirdOrderBound"
+name = "Proposition_3_1_RKPHRepresentation"
 
 [[lean_lib]]
-name = "SecondOrderEquality"
+name = "Proposition_3_2_RKPHMoments"
 
 [[lean_lib]]
-name = "ThirdOrderEquality"
+name = "Theorem_4_1_AldousShepp"
+
+[[lean_lib]]
+name = "Theorem_4_2_ThirdMomentBound"
+
+[[lean_lib]]
+name = "Theorem_4_4_AcyclicMomentRatio"
+
+[[lean_lib]]
+name = "Theorem_5_1_SecondOrderOptimality"
+
+[[lean_lib]]
+name = "Theorem_5_2_ThirdOrderOptimality"

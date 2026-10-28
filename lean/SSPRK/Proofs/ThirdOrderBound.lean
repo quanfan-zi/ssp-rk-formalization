@@ -1,4 +1,4 @@
-import SSPRK.PhaseTypeThirdMomentIntegral
+import SSPRK.PhaseTypeThirdDefect
 import SSPRK.RKThirdMoment
 
 /-!
@@ -75,7 +75,7 @@ theorem third_order_rk_ssp_bound
     rw [hfirst]
     exact hr
   -- Apply Theorem 4.1 and substitute the evaluated moments into its inequality.
-  have hbound := (h.phaseType hr).third_moment_lower_bound hmean
+  have hbound := (h.phaseType hr).third_moment_lower_bound_defect hmean
   rw [hfirst, hsecond, hthird] at hbound
   -- Section 5.3: reduce to a quadratic inequality and select its upper root.
   apply third_order_bound_of_quadratic (by exact_mod_cast (show 1 ≤ s by omega))

@@ -1,5 +1,6 @@
 import SSPRK.PhaseTypeVariance
-import SSPRK.Radius
+import SSPRK.SSPRadius
+import SSPRK.RKSubstochastic
 
 /-!
 # Phase-type probability laws from feasible Runge--Kutta tableaux

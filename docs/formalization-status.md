@@ -1,4 +1,8 @@
-# V1.6 formalization
+# V1.6 formalization (historical correspondence)
+
+This document retains the V1.6 numbering. The current manuscript is
+[V2.10.pdf](V2.10.pdf); see [the V2.10 notes](paper-v2.10/Note.md) for its
+complete proposition/theorem correspondence and proof-route differences.
 
 The second-order numerical optimum is proved: the general second-order upper bound
 `SSPRK.second_order_rk_ssp_bound`, with its original statement unchanged and no `sorry`
@@ -17,7 +21,7 @@ The continuous-time path has the prescribed initial law and absorption time. Its
 integrals satisfy the same-path decomposition and the deleted-state PH law.
 The variance theorem retains the finite Green/energy proof; the continuous-time
 martingale/optional-stopping proof is not separately formalized.
-The source remains `docs/V1.6.pdf`.
+The former V1.6 PDF has been replaced by the current manuscript.
 
 ## Source correspondence
 

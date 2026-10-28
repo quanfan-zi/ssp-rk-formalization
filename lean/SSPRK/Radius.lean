@@ -1,4 +1,4 @@
-import SecondOrderBound
+import SSPRK.Proofs.SecondOrderBound
 import SSPRK.SSPRadius
 
 /-! # The complete second-order radius bound -/

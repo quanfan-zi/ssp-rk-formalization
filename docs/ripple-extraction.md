@@ -28,7 +28,6 @@ package named Ripple.
 The PH constructions, moment bounds, equality classifications, and absorption and
 occupation laws are developed in the project modules that use this local foundation.
 
-Current proof dependencies are checked with `lake env lean scripts/AuditProofs.lean`
-from `lean/` after a successful build. The script audits all imported project
-declarations, including the local CTMC modules, and checks the four core entries.
-Historical extraction snapshots are no longer part of the maintained audit.
+The completed axiom audit covered all imported project declarations, including
+the local CTMC modules and the four core entries. The audit scripts were subsequently
+removed at the user's request. Run `lake build` from `lean/` to check the proofs.

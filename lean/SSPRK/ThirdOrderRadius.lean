@@ -1,4 +1,4 @@
-import ThirdOrderBound
+import SSPRK.Proofs.ThirdOrderBound
 
 /-! # The complete third-order radius bound -/
 
