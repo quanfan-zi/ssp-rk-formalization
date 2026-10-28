@@ -6,7 +6,7 @@ import Mathlib.Algebra.Polynomial.Div
 /-!
 # Characteristic-polynomial obstruction for Erlang phase-type laws
 
-This is the pole-counting first step of historical V1.6 Lemma 4.7.  The generator resolvent is
+The generator resolvent is
 written using its adjugate and determinant; equality with the Erlang Laplace transform
 then gives a polynomial identity on the nonnegative half-line.
 -/

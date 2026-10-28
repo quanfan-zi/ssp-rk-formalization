@@ -3,13 +3,13 @@
 Lean formalization of SSP-RK theory
 
 This project formalizes SSP-RK theory in Lean. The current entries cover all propositions
-and theorems of the supplied V2.10 manuscript, reusing and extending the V1.6 formalization.
+and theorems of the V2.10 manuscript.
 
 ## V2.10 paper entries
 
-The current extension follows the manuscript in `SSP_Runge_Kutta_Sharp_Boundary.zip`.
+The formalization follows the [V2.10 manuscript](docs/V2.10.pdf).
 Its three propositions and five theorems have explicit entries in `lean/`, all imported
-by [Main.lean](lean/Main.lean). The [working note](docs/paper-v2.10/Note.md) records
+by [Main.lean](lean/Main.lean). The [working note](docs/Note.md) records
 statement interpretation, proof reuse, and differences from the manuscript.
 
 | Paper statement | Entry |
@@ -55,9 +55,7 @@ $$
 The minimum-variance inequality is proved for these actual measures. Feasible RK tableaux
 produce PH laws with mean $r$ and variance $2r$ under the two order conditions.
 Endpoint feasibility and downward closure of the complete SSP conditions are also proved.
-See [the proof explanation](docs/second-order-proof.md) and
-[the third-order proof correspondence](docs/third-order-proof.md), together with
-[the source correspondence and remaining work](docs/formalization-status.md).
+See [the V2.10 proof correspondence and interpretation notes](docs/Note.md).
 
 Validated with Lean 4.30.0: the integrated `lake build` succeeds, integrated modules contain
 no proof placeholders, and the checked main theorems use only `propext`, `Classical.choice`, and
@@ -113,20 +111,16 @@ lemmas used from Ripple are extracted into `lean/SSPRK/CTMC/`; see the
   measure and sharp variance formula.
 - `lean/SSPRK/PhaseTypeVariance.lean`, `RKPhaseType.lean`: the PH variance bound
   and its probability-law connection to RK tableaux.
-- `lean/SSPRK/MomentAlgebra.lean`, `MomentAlgebraEquality.lean`, `MomentMixture.lean`:
-  sum and mixture moment inequalities and their equality conditions.
-- `lean/SSPRK/PhaseTypeThirdMoment.lean`, `PhaseTypeThirdMomentIntegral.lean`:
-  the state-count induction and the actual PH third-moment inequality.
+- `lean/SSPRK/ThirdMomentDefect.lean`, `PhaseTypeThirdDefect.lean`,
+  `PhaseTypeThirdDefectEquality.lean`: the defect identity, state-count induction,
+  and equality classification for the PH third-moment bound.
+- `lean/SSPRK/AcyclicPaths.lean`, `AcyclicMomentBound.lean`: finite path expansion
+  and all adjacent moment bounds for acyclic PH laws.
 - `lean/SSPRK/ThirdOrderRadius.lean`, `ThirdOrderOptimality.lean`: the general third-order
   complete-radius bound and numerical optimum.
 - `lean/SSPRK/ThirdOrderRadiusEquality.lean`: full third-order optimizer uniqueness.
 - `lean/SSPRK/SDIRKOrder.lean`, `SDIRKAttainment.lean`: all four order-three conditions
   and the explicit feasible SDIRK family.
-- `lean/SSPRK/AuxiliaryScale.lean`, `ScaledExponential.lean`, `AuxiliaryLaw.lean`:
-  a nonnegative probability law realizing the three state-elimination correction moments.
-- `lean/SSPRK/PhaseTypeAuxiliary.lean`, `MomentConvolution.lean`: the actual independent
-  convolution matching the first three PH integral moments.
-- `lean/SSPRK/LengthBias.lean`: the length-biased law and its normalized variance identity.
 - `lean/SSPRK/PhaseTypeDensity.lean`: the matrix-exponential PH density formula.
 - `lean/SSPRK/CTMC/`: the local finite CTMC core and canonical record measure.
 - `lean/Main.lean`: imports the modules checked by the default build.

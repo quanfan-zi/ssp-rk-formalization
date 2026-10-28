@@ -1,20 +1,14 @@
 # V2.10 formalization notes
 
 This is the working record for the manuscript supplied in
-`SSP_Runge_Kutta_Sharp_Boundary.zip`. The source files in this directory were
+`SSP_Runge_Kutta_Sharp_Boundary.zip`. The source files in `docs/paper-v2.10/` were
 extracted without editing. The branch is `codex/paper-v2-10-formalization`, based on
-`origin/main` at `a784414ad1cdb22ae9e868a8e829e80b9b035b23`.
+`origin/main`.
 The remote has no `master`; using `main` was explicitly confirmed by the user.
 The archive and its four extracted manuscript files are intentionally Git-ignored
 at the user's request. The Lean build does not require the manuscript files.
-The compiled [V2.10 PDF](../V2.10.pdf) is tracked at the user's subsequent request,
-replacing the former V1.6 PDF. It was built from the unchanged source with
+The compiled [V2.10 PDF](V2.10.pdf) is tracked. It was built from the unchanged source with
 pdfLaTeX and BibTeX; the final 22-page output has resolved references and citations.
-
-Archive SHA-256:
-`8c5557bdb462e434da7fb0740cce94f6d9c88080152b7e2af6cf79b7cddc86e6`.
-Source `V2.10.tex` SHA-256:
-`ac4c32b81bd4b185958290707d097932546e77ad90ec24dc3ef16d54118f701f`.
 
 ## Entry inventory
 
@@ -35,15 +29,14 @@ five theorems have public entries. Numbers use underscores in module names.
 | Theorem 5.2 | `Theorem_5_2_ThirdOrderOptimality.lean` | `theorem_5_2` |
 
 `Main.lean` imports these entries and retains the existing internal formalization.
-The four previous entry modules are now in `lean/SSPRK/Proofs/`; their theorem names
-and signatures are preserved. The root `lean/` directory contains `Main.lean` and
+The four RK bound and equality modules are in `lean/SSPRK/Proofs/`. The root `lean/` directory contains `Main.lean` and
 the eight numbered proposition/theorem files.
 All eight statements and proofs have been checked. No `sorry` remains in the
 project Lean sources. Successful elaboration alone would not establish this:
 the completed strict axiom audit also checked all imported project declarations,
 required all eight entries, and rejected `sorryAx`. The coverage and audit scripts
-were subsequently removed at the user's request; the results below are historical
-verification records. Run `lake build` from `lean/` to check the proofs.
+were subsequently removed at the user's request; the results below record the completed
+verification. Run `lake build` from `lean/` to check the proofs.
 
 ## Statement interpretation
 
@@ -92,7 +85,7 @@ to change its presentation; this substitution remains explicit.
 The second-order RK bound now normalizes the PH initial row and proves the paper's
 stronger intermediate estimate $1+1/s\leq\sigma(1+2/r)$, before applying $\sigma\leq1$.
 `PaperSecondOrderBound.lean` reuses the existing integral moments and variance theorem
-for this step; the old direct zero-atom shortcut is no longer the bound's proof route.
+for this step.
 
 ### All-order RK moments
 
@@ -103,8 +96,7 @@ chain order conditions. No branching conditions are inferred from chain conditio
 
 ### Third-moment proof route
 
-The previous proof uses moment-class convolution and an independent replacement.
-V2.10 instead uses a mixed-occupation expansion, an exact defect identity, and a
+V2.10 uses a mixed-occupation expansion, an exact defect identity, and a
 sum-of-squares remainder. `ThirdMomentDefect.lean` proves these scalar identities
 and their equality conditions. `PhaseTypeThirdDefect.lean` connects them to a new
 state-count induction; `PhaseTypeThirdDefectEquality.lean` uses vanishing squares
@@ -122,7 +114,7 @@ before comparing their rates.
 
 ### Acyclic moment ratios
 
-Theorem 4.4 is new relative to the previous formalization. Its proof keeps
+The proof of Theorem 4.4 keeps
 the paper's finite decreasing paths, complete homogeneous polynomials, normalized
 Schur inequality, and mixture Cauchy--Schwarz step. The cited Schur inequality is
 proved internally using finite weighted Cauchy--Schwarz and composition
@@ -149,20 +141,18 @@ further route changes will be recorded here when they are connected and checked.
 
 ## Verification record
 
-Checked on 2026-10-28 with Lean 4.30.0 and mathlib revision
-`c5ea00351c28e24afc9f0f84379aa41082b1188f`:
+Checked on 2026-10-28 with Lean 4.30.0 and the mathlib version pinned in
+`lean/lake-manifest.json`:
 
 - `lake build`: passed, 3,679 jobs, including every numbered entry and `Main`.
 - Source-coverage check: all three
   propositions and five theorems found, with declarations, imports and libraries registered.
 - Axiom audit: all 1,882 imported project declarations
   use only `propext`, `Classical.choice`, and `Quot.sound`. All eight numbered
-  declarations and the four preserved legacy theorem names were required by the audit.
+  declarations and the four RK bound and equality theorem names were required by the audit.
 - Proof-route audit: checked actual elaborated dependencies
   of the transience criterion, the Schur/path argument, the normalized second-order
-  estimate, and the new third-moment defect proof. For Theorems 4.2 and 5.2 it also
-  rejected dependence on the old moment-class addition, length-bias comparison,
-  independent replacement, or old third-moment induction.
+  estimate, and the third-moment defect proof used by Theorems 4.2 and 5.2.
 
 A separate subagent compared all eight entry statements with the manuscript's
 quantifiers, normalization, equality cases and optimum definitions. Its concern

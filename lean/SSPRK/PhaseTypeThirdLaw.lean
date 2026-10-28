@@ -158,7 +158,7 @@ private theorem atom_gamma_power_integral {m a κ : ℝ} (hm : 0 ≤ m) (ha : 0 
     (fun x : ℝ ↦ x ^ k) hint (zero_pow hk.ne')).2]
   simp only [integral_smul_measure, ENNReal.toReal_ofReal hm, smul_eq_mul]
 
-/-- Historical V1.6 Corollary 4.6: third-moment equality characterizes a zero/Erlang mixture. -/
+/-- Third-moment equality characterizes a zero/Erlang mixture. -/
 theorem third_integral_eq_iff_atom_add_gamma {s : ℕ} (d : PhaseTypeData s) (hs : 0 < s)
     (hmean : 0 < ∫ x, x ∂d.measure) :
     ((s : ℝ) + 2) * (∫ x, x ^ 2 ∂d.measure) ^ 2 =

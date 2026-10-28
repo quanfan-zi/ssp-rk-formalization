@@ -34,7 +34,7 @@ theorem lengthBias_mixture_weights (π m : ℕ → ℝ)
   refine ⟨fun i ↦ div_nonneg (mul_nonneg (hπ i) (hm i)) hmean.le, ?_⟩
   simpa only [div_self hmean.ne'] using hsum.hasSum.div_const (∑' i, π i * m i)
 
-/-- Historical V1.6 Lemma 4.2: length bias of a countable mixture is the mixture of the biased laws,
+/-- Length bias of a countable mixture is the mixture of the biased laws,
 with weights proportional to the original weights times the component means. -/
 theorem lengthBias_probabilityMomentMixture (π : ℕ → ℝ) (μ : ℕ → Measure ℝ)
     (hπ : ∀ i, 0 ≤ π i) (hnonneg : ∀ i, ∀ᵐ t ∂μ i, 0 ≤ t)
