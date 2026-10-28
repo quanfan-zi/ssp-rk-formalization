@@ -3,7 +3,7 @@ import SSPRK.Proofs.SecondOrderClassification
 /-!
 # Equality classification for the second-order SSP bound
 
-The uniqueness part of Theorem 5.2: feasibility at the sharp parameter forces
+The uniqueness part of V2.10 Theorem 5.1: feasibility at the sharp parameter forces
 the explicit repeated midpoint coefficients below, up to simultaneous stage permutation.
 This is the necessity direction; attainment of the displayed family is proved separately.
 

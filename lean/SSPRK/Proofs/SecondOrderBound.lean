@@ -6,7 +6,7 @@ import SSPRK.PaperSecondOrderBound
 /-!
 # The second-order SSP bound from explicit matrix constraints
 
-The upper-bound part of Theorem 5.2: every real tableau satisfying the two
+The upper-bound part of V2.10 Theorem 5.1: every real tableau satisfying the two
 second-order conditions and the four complete SSP inequalities has `r ≤ 2 * s`.
 
 The V2.10 proof uses the normalized RK--PH transform and the existing
@@ -24,7 +24,7 @@ lemma second_order_bound_of_weighted_moment_inequality
     (hbound : (s + 1) * r ^ 2 ≤ 2 * s * (r + r ^ 2 / 2)) : r ≤ 2 * s := by
   nlinarith
 
-/-- Theorem 5.2: the bound at every positive feasible parameter,
+/-- V2.10 Theorem 5.1: the bound at every positive feasible parameter,
 with invertibility, order conditions, and all four SSP constraints stated explicitly. -/
 theorem second_order_rk_ssp_bound
     (s : ℕ)

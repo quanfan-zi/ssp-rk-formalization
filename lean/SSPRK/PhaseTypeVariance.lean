@@ -5,7 +5,8 @@ import Mathlib.Probability.Moments.Variance
 /-!
 # Minimum variance of a finite phase-type law
 
-Theorem 3.1 of V1.6 for the probability measure constructed by uniformization.
+The variance bound of V2.10, Theorem 4.1, extended to the probability measure
+constructed by uniformization with a subprobability initial row.
 Initial mixtures and an atom at zero are included.
 -/
 

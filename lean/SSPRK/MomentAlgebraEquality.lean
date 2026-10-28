@@ -5,7 +5,7 @@ import Mathlib.Tactic
 # Equality in third-moment convolution
 
 The nonnegative certificates for second-moment convolution and length-biased mixing
-identify the necessary equality conditions in Lemma 4.3.
+identify the necessary equality conditions in historical V1.6 Lemma 4.3.
 -/
 
 namespace SSPRK

@@ -7,6 +7,8 @@ import SSPRK.PhaseTypeThirdMoment
 
 The algebraic Green moments and the actual probability integrals differ by positive
 time scaling. This module carries the state-count moment bounds to the probability law.
+It retains the historical moment-class proof. The public V2.10 Theorem 4.2 instead
+uses `PhaseTypeThirdDefect.lean` and its defect-based equality proof.
 -/
 
 open MeasureTheory
@@ -40,14 +42,14 @@ theorem integral_moment_class {s : ℕ} (d : PhaseTypeData s)
   rw [d.integral_id_measure] at hmean
   exact (div_pos_iff_of_pos_right d.rate_pos).mp hmean
 
-/-- V1.6 Theorem 4.1, with the actual PH integral moments and zero atoms allowed. -/
+/-- Historical V1.6 Theorem 4.1, with the actual PH integral moments and zero atoms allowed. -/
 theorem third_moment_lower_bound {s : ℕ} (d : PhaseTypeData s)
     (hmean : 0 < ∫ x, x ∂d.measure) :
     ((s : ℝ) + 2) * (∫ x, x ^ 2 ∂d.measure) ^ 2 ≤
       ((s : ℝ) + 1) * (∫ x, x ∂d.measure) * (∫ x, x ^ 3 ∂d.measure) :=
   (d.integral_moment_class hmean).third_bound
 
-/-- The adjacent moment ratio formulation of V1.6 Theorem 4.1. -/
+/-- The adjacent moment ratio formulation of historical V1.6 Theorem 4.1. -/
 theorem third_moment_ratio_lower_bound {s : ℕ} (d : PhaseTypeData s)
     (hmean : 0 < ∫ x, x ∂d.measure) :
     ((s : ℝ) + 2) / ((s : ℝ) + 1) ≤

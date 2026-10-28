@@ -1,4 +1,8 @@
-# Third-order proof correspondence
+# Third-order proof correspondence (historical V1.6 route)
+
+All paper numbers below refer to V1.6. The current V2.10 Theorems 4.2 and 5.2
+use the defect-based proof described in [the V2.10 notes](paper-v2.10/Note.md).
+This document records the retained moment-class and independent-replacement route.
 
 This describes the implementation on `codex/third-order-proof`. The numerical optimum
 and optimizer uniqueness in V1.6 Theorem 5.3 are proved. The canonical CTMC path and

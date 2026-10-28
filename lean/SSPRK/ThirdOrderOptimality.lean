@@ -34,7 +34,7 @@ def thirdOrderTableauRadii (s : ℕ) : Set ℝ≥0∞ :=
 noncomputable def thirdOrderOptimalRadius (s : ℕ) : ℝ≥0∞ :=
   sSup (thirdOrderTableauRadii s)
 
-/-- The numerical optimum in V1.6 Theorem 5.3. -/
+/-- The numerical optimum in V2.10 Theorem 5.2. -/
 theorem third_order_optimal_radius {s : ℕ} (hs : 2 ≤ s) :
     thirdOrderOptimalRadius s = ENNReal.ofReal (thirdOrderRadius s) := by
   apply le_antisymm

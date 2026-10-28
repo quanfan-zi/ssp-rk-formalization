@@ -5,7 +5,7 @@ import Mathlib.Topology.Sequences
 /-!
 # Feasibility of the absolute-monotonicity endpoint
 
-The compactness argument from V1.6, Lemma 5.1.  Substochasticity keeps the
+The endpoint compactness argument in the proof of V2.10, Theorem 5.1.  Substochasticity keeps the
 Runge--Kutta transforms in a compact entrywise box, so singularity cannot first
 occur at a positive finite endpoint.
 -/
@@ -141,7 +141,8 @@ theorem isClosed_feasibleRadii {s : ℕ} (A : Matrix (Fin s) (Fin s) ℝ)
     · intro n
       exact hn₀ (n + n₀) (by omega)
 
-/-- Lemma 5.1: a finite complete absolute-monotonicity radius belongs to the feasible set. -/
+/-- Endpoint step in V2.10, Theorem 5.1: a finite complete absolute-monotonicity radius belongs to
+the feasible set. -/
 theorem absoluteMonotonicityRadius_toReal_mem_feasibleRadii {s : ℕ}
     (A : Matrix (Fin s) (Fin s) ℝ) (b : Fin s → ℝ)
     (hfinite : absoluteMonotonicityRadius A b < ⊤) :

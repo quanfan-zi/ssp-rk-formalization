@@ -4,8 +4,8 @@ import Mathlib.Data.ENNReal.Real
 /-!
 # Complete absolute-monotonicity constraints and radius
 
-The algebraic feasible set and its extended nonnegative supremum, as in V1.6,
-Section 2.4. Order conditions are imposed separately by the application theorems.
+The algebraic feasible set and its extended nonnegative supremum, as in V2.10,
+Section 2.2. Order conditions are imposed separately by the application theorems.
 -/
 
 namespace SSPRK

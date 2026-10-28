@@ -17,7 +17,8 @@ namespace PhaseTypeData
 
 variable {s : ℕ} (d : PhaseTypeData s)
 
-/-- The PH Laplace transform in the generator form of Proposition 2.2. -/
+/-- The PH Laplace transform in generator form, as in V2.10, Section 2.3, with a possible zero atom.
+-/
 theorem integral_exp_neg_mul_eq_generator (u : ℝ) (hu : 0 ≤ u) :
     ∫ x, Real.exp (-u * x) ∂d.measure =
       1 - d.mass + dotProduct d.initial

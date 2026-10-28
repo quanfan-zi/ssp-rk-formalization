@@ -4,7 +4,8 @@ import SSPRK.VariancePotential
 /-!
 # The phase-count second-moment bound
 
-The matrix form of V1.6 Theorem 3.1, including a subprobability initial row.
+A matrix extension of the variance bound in V2.10, Theorem 4.1,
+including a subprobability initial row.
 All potential inequalities are proved from the number of states, rather than assumed.
 -/
 

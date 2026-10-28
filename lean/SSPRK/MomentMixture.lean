@@ -25,7 +25,8 @@ lemma weighted_quadratic_bound {ι : Type*} [Fintype ι]
   apply (mul_le_mul_iff_right₀ hc).mp
   nlinarith only [hcs]
 
-/-- V1.6 Lemma 4.2: a finite mixture may assign its remaining probability mass to zero. -/
+/-- Historical V1.6 Lemma 4.2: a finite mixture may assign its remaining probability mass to zero.
+-/
 theorem MomentClass.finite_mixture {ι : Type*} [Fintype ι]
     {k : ℝ} (π m1 m2 m3 : ι → ℝ) (hπ : ∀ i, 0 ≤ π i)
     (hmass : ∑ i, π i ≤ 1) (hx : ∀ i, MomentClass k (m1 i) (m2 i) (m3 i))

@@ -4,7 +4,7 @@ import Mathlib.Tactic
 /-!
 # A two-point auxiliary scale
 
-The real-algebraic construction in Lemma 4.5 realizes the prescribed first three
+The real-algebraic construction in historical V1.6 Lemma 4.5 realizes the prescribed first three
 moments using two nonnegative scale values. No probability measure is defined here.
 -/
 
@@ -69,7 +69,7 @@ theorem exists_auxiliary_scale_of_pos (η1 η2 : ℝ) (hη1 : 0 < η1) (hη2 : 0
     dsimp [a, b]
     field_simp; ring
 
-/-- Nonnegative two-point scales realize the three moments required by Lemma 4.5. -/
+/-- Nonnegative two-point scales realize the three moments required by historical V1.6 Lemma 4.5. -/
 theorem exists_auxiliary_scale (η1 η2 : ℝ) (hη1 : 0 ≤ η1) (hη2 : 0 ≤ η2)
     (hzero : η1 = 0 → η2 = 0) :
     ∃ lo hi p q : ℝ, 0 ≤ lo ∧ 0 ≤ hi ∧ 0 ≤ p ∧ 0 ≤ q ∧

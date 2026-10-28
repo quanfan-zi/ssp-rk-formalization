@@ -7,7 +7,7 @@ import Mathlib.Probability.ConditionalProbability
 
 Normalizing the initial transient mass is exactly conditional probability on the
 positive half-line. This relates the zero-atom decomposition to the language of
-conditional laws used in V1.6 Corollary 4.6.
+conditional laws used in historical V1.6 Corollary 4.6.
 -/
 
 open MeasureTheory ProbabilityTheory Set
@@ -62,7 +62,8 @@ theorem third_integral_eq_normalize_iff {s : ℕ} (d : PhaseTypeData s) (hm : 0 
     d.normalizeInitial_integral_pow hm 3 (by norm_num)]
   field_simp
 
-/-- Corollary 4.6 stated using the actual conditional law on strictly positive times. -/
+/-- Historical V1.6 Corollary 4.6 stated using the actual conditional law on strictly positive
+times. -/
 theorem third_integral_eq_iff_cond_erlang {s : ℕ} (d : PhaseTypeData s) (hs : 0 < s)
     (hmean : 0 < ∫ x, x ∂d.measure) :
     (((s : ℝ) + 2) * (∫ x, x ^ 2 ∂d.measure) ^ 2 =

@@ -8,7 +8,7 @@ import SSPRK.PhaseTypeTimeChange
 
 After normalizing one Green diagonal entry, the smaller PH law and an independent
 nonnegative auxiliary variable reproduce the first three moments of the original
-fixed-state law. This constructs the replacement in V1.6 Lemma 4.5 as a convolution
+fixed-state law. This constructs the replacement in historical V1.6 Lemma 4.5 as a convolution
 of actual probability measures; it does not identify actual occupation times as independent.
 -/
 

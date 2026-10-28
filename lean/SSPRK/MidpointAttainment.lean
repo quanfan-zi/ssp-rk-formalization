@@ -5,7 +5,7 @@ import SSPRK.ChainMatrices
 /-!
 # Attainment of the second-order bound
 
-The repeated implicit midpoint tableau from V1.6, equation (5.1), is feasible at `2s`.
+The repeated implicit midpoint tableau from V2.10, Theorem 5.1, is feasible at `2s`.
 Its explicit inverse has diagonal `1/2` and first subdiagonal `-1/2`.
 -/
 

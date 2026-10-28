@@ -4,7 +4,7 @@ import Mathlib.Tactic
 /-!
 # Order conditions for the repeated implicit midpoint rule
 
-The coefficients are the family in equation (5.1) of V1.6.  This module
+The coefficients are the family in V2.10, Theorem 5.1.  This module
 establishes only its first two classical Runge--Kutta order conditions.
 -/
 

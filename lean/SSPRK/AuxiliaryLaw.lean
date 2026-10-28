@@ -7,7 +7,7 @@ import Mathlib.MeasureTheory.Integral.Bochner.SumMeasure
 # The auxiliary probability law in state elimination
 
 A two-point mixture of scaled exponential laws realizes the three auxiliary moments
-in V1.6 Lemma 4.5. The zero scale is allowed and contributes an atom at zero.
+in historical V1.6 Lemma 4.5. The zero scale is allowed and contributes an atom at zero.
 -/
 
 open MeasureTheory
@@ -54,7 +54,8 @@ theorem binaryScaledExponential_nonneg {p q lo hi : ℝ}
   · exact Measure.ae_smul_measure (ae_nonneg_scaledExponentialLaw hlo) _
   · exact Measure.ae_smul_measure (ae_nonneg_scaledExponentialLaw hhi) _
 
-/-- A nonnegative probability law realizes all three auxiliary moments in Lemma 4.5. -/
+/-- A nonnegative probability law realizes all three auxiliary moments in historical V1.6 Lemma 4.5.
+-/
 theorem exists_auxiliary_probability (η1 η2 : ℝ) (hη1 : 0 ≤ η1) (hη2 : 0 ≤ η2)
     (hzero : η1 = 0 → η2 = 0) :
     ∃ μ : Measure ℝ, IsProbabilityMeasure μ ∧ (∀ᵐ x ∂μ, 0 ≤ x) ∧

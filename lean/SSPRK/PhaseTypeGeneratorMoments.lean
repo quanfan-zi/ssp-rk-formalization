@@ -25,7 +25,7 @@ theorem integral_pow_eq_continuousGreen (k : ℕ) (hk : 0 < k) :
         dotProduct d.initial ((d.continuousGreen ^ k).mulVec (fun _ ↦ 1)) := by
   rw [d.integral_pow_measure k hk, d.dotProduct_continuousGreen_pow k, mul_div_assoc]
 
-/-- The generator-inverse moment formula in Proposition 2.2 of V1.6. -/
+/-- The generator-inverse moment formula in V2.10, Section 2.3. -/
 theorem integral_pow_eq_generator (k : ℕ) (hk : 0 < k) :
     ∫ x, x ^ k ∂d.measure =
       (k.factorial : ℝ) *
