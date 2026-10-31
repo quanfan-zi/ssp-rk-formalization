@@ -2,12 +2,34 @@
 
 Lean formalization of SSP-RK theory
 
-This project is used for the Lean formal verification of the SSP-RK theory. Based on the main proof line of the paper V1.6, the repository mainly maintains Lean code.
+This project formalizes SSP-RK theory in Lean. The current entries cover all propositions
+and theorems of the V2.10 manuscript.
+
+## V2.10 paper entries
+
+The formalization follows the [V2.10 manuscript](docs/V2.10.pdf).
+Its three propositions and five theorems have explicit entries in `lean/`, all imported
+by [Main.lean](lean/Main.lean). The [working note](docs/Note.md) records
+statement interpretation, proof reuse, and differences from the manuscript.
+
+| Paper statement | Entry |
+| --- | --- |
+| Proposition 2.3: transient subintensity criterion | [Proposition_2_3_TransientSubintensity.lean](lean/Proposition_2_3_TransientSubintensity.lean) |
+| Proposition 3.1: RK--PH representation | [Proposition_3_1_RKPHRepresentation.lean](lean/Proposition_3_1_RKPHRepresentation.lean) |
+| Proposition 3.2: all-order RK--PH moments | [Proposition_3_2_RKPHMoments.lean](lean/Proposition_3_2_RKPHMoments.lean) |
+| Theorem 4.1: Aldous--Shepp variance bound | [Theorem_4_1_AldousShepp.lean](lean/Theorem_4_1_AldousShepp.lean) |
+| Theorem 4.2: third-moment ratio and equality | [Theorem_4_2_ThirdMomentBound.lean](lean/Theorem_4_2_ThirdMomentBound.lean) |
+| Theorem 4.4: acyclic moment ratios of every order | [Theorem_4_4_AcyclicMomentRatio.lean](lean/Theorem_4_4_AcyclicMomentRatio.lean) |
+| Theorem 5.1: second-order optimality and uniqueness | [Theorem_5_1_SecondOrderOptimality.lean](lean/Theorem_5_1_SecondOrderOptimality.lean) |
+| Theorem 5.2: third-order optimality and uniqueness | [Theorem_5_2_ThirdOrderOptimality.lean](lean/Theorem_5_2_ThirdOrderOptimality.lean) |
+
+All eight entries are proved without `sorry`. The default build, source-coverage check,
+and strict axiom audit pass. The note documents proof-route substitutions and their reasons.
 
 ## Second- and third-order optimality
 
 The general second-order bound `r ≤ 2 * s` is proved in
-`SSPRK.second_order_rk_ssp_bound` in [SecondOrder.lean](lean/SSPRK/SecondOrder.lean).
+`SSPRK.second_order_rk_ssp_bound` in [SecondOrderBound.lean](lean/SSPRK/Proofs/SecondOrderBound.lean).
 Its original statement is unchanged: arbitrary real dense tableaux are allowed, with no
 triangularity or acyclicity assumption. The complete supremum radius is also bounded by
 `2 * s` in `SSPRK.second_order_radius_bound`. The repeated midpoint family attains
@@ -33,9 +55,7 @@ $$
 The minimum-variance inequality is proved for these actual measures. Feasible RK tableaux
 produce PH laws with mean $r$ and variance $2r$ under the two order conditions.
 Endpoint feasibility and downward closure of the complete SSP conditions are also proved.
-See [the proof explanation](docs/second-order-proof.md) and
-[the third-order proof correspondence](docs/third-order-proof.md), together with
-[the source correspondence and remaining work](docs/formalization-status.md).
+See [the V2.10 proof correspondence and interpretation notes](docs/Note.md).
 
 Validated with Lean 4.30.0: the integrated `lake build` succeeds, integrated modules contain
 no proof placeholders, and the checked main theorems use only `propext`, `Classical.choice`, and
@@ -65,8 +85,9 @@ lemmas used from Ripple are extracted into `lean/SSPRK/CTMC/`; see the
 
 ## Project structure
 
-- `docs/V1.6.pdf`: reference manuscript.
-- `lean/SSPRK/SecondOrder.lean`: the general second-order SSP upper bound.
+- [docs/V2.10.pdf](docs/V2.10.pdf): current reference manuscript.
+- `lean/Proposition_*.lean`, `Theorem_*.lean`: the eight numbered V2.10 entries.
+- `lean/SSPRK/Proofs/SecondOrderBound.lean`: the general second-order SSP upper bound.
 - `lean/SSPRK/Radius.lean`: the feasible set, extended radius, and its upper bound.
 - `lean/SSPRK/Substochastic.lean`: the convergent Neumann series and inverse nonnegativity.
 - `lean/SSPRK/RKTransform.lean`, `RKSubstochastic.lean`: the RK transform and matrix moments.
@@ -75,7 +96,7 @@ lemmas used from Ripple are extracted into `lean/SSPRK/CTMC/`; see the
 - `lean/SSPRK/MidpointAttainment.lean`, `SecondOrderOptimality.lean`: midpoint attainment
   and the optimal second-order radius.
 - `lean/SSPRK/Endpoint.lean`, `DownwardClosure.lean`: closed endpoints and smaller radii.
-- `lean/SSPRK/SecondOrderUniqueness.lean`: full second-order optimizer uniqueness.
+- `lean/SSPRK/SecondOrderRadiusEquality.lean`: full second-order optimizer uniqueness.
 - `lean/SSPRK/PhaseMixtureChain.lean`: full chain representation at variance equality.
 - `lean/SSPRK/PhaseTypeData.lean`, `PhaseType.lean`, `PhaseTypeUniformization.lean`:
   finite PH representations, probability measures, and general subgenerators.
@@ -90,22 +111,17 @@ lemmas used from Ripple are extracted into `lean/SSPRK/CTMC/`; see the
   measure and sharp variance formula.
 - `lean/SSPRK/PhaseTypeVariance.lean`, `RKPhaseType.lean`: the PH variance bound
   and its probability-law connection to RK tableaux.
-- `lean/SSPRK/MomentAlgebra.lean`, `MomentAlgebraEquality.lean`, `MomentMixture.lean`:
-  sum and mixture moment inequalities and their equality conditions.
-- `lean/SSPRK/PhaseTypeThirdMoment.lean`, `PhaseTypeThirdMomentIntegral.lean`:
-  the state-count induction and the actual PH third-moment inequality.
-- `lean/SSPRK/ThirdOrder.lean`, `ThirdOrderOptimality.lean`: the general third-order
+- `lean/SSPRK/ThirdMomentDefect.lean`, `PhaseTypeThirdDefect.lean`,
+  `PhaseTypeThirdDefectEquality.lean`: the defect identity, state-count induction,
+  and equality classification for the PH third-moment bound.
+- `lean/SSPRK/AcyclicPaths.lean`, `AcyclicMomentBound.lean`: finite path expansion
+  and all adjacent moment bounds for acyclic PH laws.
+- `lean/SSPRK/ThirdOrderRadius.lean`, `ThirdOrderOptimality.lean`: the general third-order
   complete-radius bound and numerical optimum.
-- `lean/SSPRK/ThirdOrderUniqueness.lean`: full third-order optimizer uniqueness.
+- `lean/SSPRK/ThirdOrderRadiusEquality.lean`: full third-order optimizer uniqueness.
 - `lean/SSPRK/SDIRKOrder.lean`, `SDIRKAttainment.lean`: all four order-three conditions
   and the explicit feasible SDIRK family.
-- `lean/SSPRK/AuxiliaryScale.lean`, `ScaledExponential.lean`, `AuxiliaryLaw.lean`:
-  a nonnegative probability law realizing the three state-elimination correction moments.
-- `lean/SSPRK/PhaseTypeAuxiliary.lean`, `MomentConvolution.lean`: the actual independent
-  convolution matching the first three PH integral moments.
-- `lean/SSPRK/LengthBias.lean`: the length-biased law and its normalized variance identity.
 - `lean/SSPRK/PhaseTypeDensity.lean`: the matrix-exponential PH density formula.
 - `lean/SSPRK/CTMC/`: the local finite CTMC core and canonical record measure.
-- `lean/scripts/AuditCTMC.lean`: the elaborated constant-dependency and axiom audit.
 - `lean/Main.lean`: imports the modules checked by the default build.
 - `lean/lean-toolchain` and `lean/lake-manifest.json`: pinned environment.

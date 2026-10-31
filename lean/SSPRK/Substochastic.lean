@@ -7,7 +7,8 @@ import Mathlib.Tactic
 /-!
 # Finite substochastic matrices
 
-The matrix argument in V1.6, Section 2.4: a nonnegative matrix with row sums at most one
+The substochastic matrix argument used in V2.10, Proposition 3.1: a nonnegative matrix with row sums
+at most one
 and nonsingular `1 - P` has a nonnegative Green matrix. The proof uses bounded partial
 geometric sums, avoiding an additional Perron--Frobenius dependency.
 -/

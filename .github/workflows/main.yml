@@ -2,10 +2,9 @@ name: CI
 
 on:
   push:
-    branches: ["main"] # replace "main" with the default branch
+    branches: ["main"]
   pull_request:
     branches: ["main"]
-  workflow_dispatch:
 
 jobs:
   build:
@@ -13,7 +12,49 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      # uses lean standard action with all default input values
       - uses: leanprover/lean-action@v1
         with:
           lake-package-directory: lean
+      - name: Print axioms and reject proof placeholders
+        working-directory: lean
+        shell: bash
+        run: |
+          audit_file="$RUNNER_TEMP/CheckAxioms.lean"
+          cat > "$audit_file" <<'LEAN'
+          import Main
+          import Lean.Util.CollectAxioms
+          import Lean.Elab.Command
+
+          #print axioms SSPRK.Paper.proposition_2_3
+          #print axioms SSPRK.Paper.proposition_3_1
+          #print axioms SSPRK.Paper.proposition_3_2
+          #print axioms SSPRK.Paper.theorem_4_1
+          #print axioms SSPRK.Paper.theorem_4_2
+          #print axioms SSPRK.Paper.theorem_4_4
+          #print axioms SSPRK.Paper.theorem_5_1
+          #print axioms SSPRK.Paper.theorem_5_2
+
+          open Lean Elab Command in
+          run_cmd do
+            let env ← getEnv
+            let allowed := #[``propext, ``Classical.choice, ``Quot.sound]
+            let mut count := 0
+            let mut failures := 0
+            for (name, _) in env.constants.toList do
+              if let some idx := env.getModuleIdxFor? name then
+                let moduleName := env.header.moduleNames[idx]!.toString
+                if moduleName == "Main" || moduleName.startsWith "SSPRK." ||
+                    moduleName.startsWith "Proposition_" || moduleName.startsWith "Theorem_" then
+                  count := count + 1
+                  let axioms ← Lean.collectAxioms name
+                  for ax in axioms do
+                    unless allowed.contains ax do
+                      failures := failures + 1
+                      logError m!"{name} depends on forbidden axiom {ax}"
+            if count == 0 then
+              throwError "No project declarations were checked"
+            if failures > 0 then
+              throwError "Axiom audit failed: {failures} forbidden dependencies"
+            logInfo m!"PASS: checked {count} imported project declarations; no sorryAx; only {allowed}"
+          LEAN
+          lake env lean "$audit_file"

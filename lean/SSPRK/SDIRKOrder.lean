@@ -4,7 +4,7 @@ import Mathlib.Tactic
 /-!
 # Third-order SDIRK tableau
 
-The family on pages 19--20 of V1.6 has `s` stages and realizes the third-order
+The family in V2.10, Theorem 5.2 has `s` stages and realizes the third-order
 conditions at its stated radius.
 -/
 

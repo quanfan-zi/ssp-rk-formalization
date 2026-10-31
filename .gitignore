@@ -1,1 +1,8 @@
 /lean/.lake/
+
+# Locally supplied V2.10 manuscript; review notes and proof sources remain tracked.
+/SSP_Runge_Kutta_Sharp_Boundary.zip
+/docs/paper-v2.10/V2.10.tex
+/docs/paper-v2.10/references.bib
+/docs/paper-v2.10/siamart251216.cls
+/docs/paper-v2.10/siamplain.bst

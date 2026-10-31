@@ -5,8 +5,7 @@ a Lake package dependency. This document records source attribution and licensin
 
 ## Provenance and license
 
-The source is [pcbcos/Ripple](https://github.com/pcbcos/Ripple) at commit
-`83d6a77319d1bbb9bd397f9613244d396dc48583`. The extracted files derive from
+The source is [pcbcos/Ripple](https://github.com/pcbcos/Ripple). The extracted files derive from
 `Ripple/CTMC/DTMC.lean`, `Ripple/CTMC/CTMC.lean`, and
 `Ripple/CTMC/CanonicalLaw.lean`. Ripple is licensed under Apache-2.0; the complete
 upstream license is retained in [Ripple-Apache-2.0.txt](../licenses/Ripple-Apache-2.0.txt).
@@ -28,7 +27,6 @@ package named Ripple.
 The PH constructions, moment bounds, equality classifications, and absorption and
 occupation laws are developed in the project modules that use this local foundation.
 
-Current proof dependencies are checked with `lake env lean scripts/AuditProofs.lean`
-from `lean/` after a successful build. The script audits all imported project
-declarations, including the local CTMC modules, and checks the four core entries.
-Historical extraction snapshots are no longer part of the maintained audit.
+The completed axiom audit covered all imported project declarations, including
+the local CTMC modules and the four core entries. The audit scripts were subsequently
+removed at the user's request. Run `lake build` from `lean/` to check the proofs.

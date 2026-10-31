@@ -6,7 +6,7 @@ import SSPRK.PhaseTypeReindex
 /-!
 # Minimal Erlang phase-type rigidity
 
-The spectral and graph proof of Lemma 4.7: exact-rate uniformization is nilpotent,
+Exact-rate uniformization is nilpotent,
 a longest positive path orders the states, and maximal occupation forces the chain.
 No variance or third-moment equality characterization is used.
 -/
@@ -83,7 +83,7 @@ theorem exists_ordered_chain_of_nilpotent_gamma {s : ℕ} (d : PhaseTypeData s)
     a.substochastic.nonneg a.substochastic.row_sum_le hforward a.initial_nonneg
     hamass hapos hamean a.occupation_balance⟩
 
-/-- Lemma 4.7 in minimal dimension, proved by the spectral and longest-path argument. -/
+/-- An Erlang law in minimal dimension determines the equal-rate chain representation. -/
 theorem erlang_rigidity_of_measure_eq_gamma {s : ℕ} (d : PhaseTypeData s)
     (κ : ℝ) (hs : 0 < s) (hκ : 0 < κ) (hmass : d.mass = 1)
     (hlaw : d.measure = gammaMeasure (s : ℝ) κ) :

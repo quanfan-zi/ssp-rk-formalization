@@ -6,8 +6,8 @@ import Mathlib.Tactic.Positivity
 /-!
 # Algebra of the first three moments
 
-The moment conditions defining the classes in V1.6, Section 4.1, and their closure under
-the moment convolution of independent sums. The proof uses polynomial certificates for
+Moment classes and their closure under the moment convolution of independent sums.
+The proof uses polynomial certificates for
 the variance comparison and the two-component length-biased mixture.
 -/
 
@@ -88,7 +88,7 @@ lemma third_moment_add (p q x y a b c d : ℝ)
     (by nlinarith only [hfirst]) (by nlinarith only [hsecond])
   nlinarith only [hmix]
 
-/-- Pure moment form of V1.6 Lemma 4.3: convolution adds the class parameters. -/
+/-- Moment convolution adds the class parameters. -/
 theorem MomentClass.add {p q x y a b c d : ℝ}
     (hx : MomentClass p x a c) (hy : MomentClass q y b d) :
     MomentClass (p + q) (x + y) (a + b + 2 * x * y)

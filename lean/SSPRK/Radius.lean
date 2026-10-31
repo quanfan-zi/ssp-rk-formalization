@@ -1,4 +1,4 @@
-import SecondOrderBound
+import SSPRK.Proofs.SecondOrderBound
 import SSPRK.SSPRadius
 
 /-! # The complete second-order radius bound -/
@@ -18,7 +18,7 @@ theorem feasibleRadii_le_second_order {s : ℕ} (hs : 0 < s)
   · exact second_order_rk_ssp_bound s hs A b r hr h.det_ne_zero hord1 hord2
       h.stages h.matrix_nonneg h.output_nonneg h.output_mass
 
-/-- The second-order upper bound for the full supremum radius in Theorem 5.2. -/
+/-- The second-order upper bound for the full supremum radius in V2.10 Theorem 5.1. -/
 theorem second_order_radius_bound {s : ℕ} (hs : 0 < s)
     (A : Matrix (Fin s) (Fin s) ℝ) (b : Fin s → ℝ)
     (hord1 : dotProduct b (fun _ ↦ (1 : ℝ)) = 1)

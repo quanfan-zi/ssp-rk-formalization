@@ -3,7 +3,7 @@ import SSPRK.MidpointAttainment
 /-!
 # The optimal second-order radius
 
-The numerical equality in V1.6 Theorem 5.2: the supremum over all real second-order
+The numerical equality in V2.10 Theorem 5.1: the supremum over all real second-order
 tableaux with `s` stages equals `2s`. Classification of all optimizers is a separate result.
 -/
 

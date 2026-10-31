@@ -6,7 +6,7 @@ import SSPRK.LaplaceUniqueness
 # Removing actual occupation time
 
 Deleting the first transient state's occupation from a canonical path gives the
-Schur-complement phase-type law of Lemma 4.4.
+Schur-complement phase-type law used in V2.10, Lemma 4.3.
 -/
 
 open MeasureTheory
@@ -46,7 +46,8 @@ theorem integral_exp_neg_occupationRest (u : ℝ) (hu : 0 ≤ u) :
     show (0 : Fin (n + 1)).succ = (1 : Fin (n + 2)) by rfl,
     d.eliminationHarmonic_one, neg_mul] using h
 
-/-- Lemma 4.4 identifies the law of the occupation outside the first transient state. -/
+/-- The state-elimination step of V2.10, Lemma 4.3, identifies the law of the occupation outside the
+first transient state. -/
 theorem canonicalRecords_map_occupationRest :
     (d.startAt 0).canonicalRecords.map recordOccupationRest = d.eliminateZero.measure := by
   letI : IsProbabilityMeasure ((d.startAt 0).canonicalRecords.map recordOccupationRest) :=
