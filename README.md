@@ -1,6 +1,6 @@
 # ssp-rk-formalization
 
-Lean formalization of SSP-RK theory
+Lean formalization of SSP-RK theory https://arxiv.org/abs/2610.37425
 
 This project formalizes SSP-RK theory in Lean. The current entries cover all propositions
 and theorems of the V2.10 manuscript.
